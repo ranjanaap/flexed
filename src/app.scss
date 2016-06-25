@@ -1,0 +1,167 @@
+@import "normalize";
+@import "bourbon5/bourbon";
+@import "flexed";
+body {
+    margin: 2rem auto;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    background-color: cornsilk;
+    color: darkslategray;
+}
+
+section {
+    margin: 3rem auto;
+    max-width: 70rem;
+    padding: 0 1rem;
+}
+
+h1,
+h2 {
+    margin: 1rem 0 1.5rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+article h2 {
+    text-align: left;
+    padding: 0 0.5rem;
+    margin-bottom: .5rem;
+}
+
+p,
+pre {
+    line-height: 1.4;
+}
+
+p {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+pre {
+    font-size: 1.3rem;
+    font-family: monospace;
+}
+
+.row,
+.cell {
+    margin-bottom: 1.5rem;
+}
+
+.cell {
+    background-color: azure;
+    border: 1px solid darkcyan;
+    p {
+        text-align: center;
+    }
+}
+
+.nested {
+    aside,
+    main {
+        border: dashed 1px darkcyan;
+    }
+}
+
+@include breakpoint(wide) {
+    .row {
+        @include container();
+    }
+    .row.even.one-col .cell {
+        @include column();
+    }
+    .row.even.two-col .cell {
+        @include column(1/2);
+    }
+    .row.even.three-col .cell {
+        @include column();
+    }
+    .row.even.four-col .cell {
+        @include column();
+    }
+    .cell.two-twelve {
+        @include column()
+    }
+    .cell.three-twelve {
+        @include column()
+    }
+    .cell.five-twelve {
+        @include column()
+    }
+    .cell.eight-twelve {
+        @include column()
+    }
+    .cell.nine-twelve {
+        @include column()
+    }
+    .cell.two-eleven {
+        @include column()
+    }
+    .cell.four-eleven {
+        @include column()
+    }
+    .cell.one-eleven {
+        @include column()
+    }
+    .nested {
+        @include container();
+        
+        aside {
+            @include column(1/3);
+        }
+        
+        main {
+            @include column(2/3);
+        }
+    }
+}
+
+
+@include breakpoint(full) {
+    .row {
+        @include container();
+    }
+    .row.even.one-col .cell {
+        @include column();
+    }
+    .row.even.two-col .cell {
+        @include column(1/2);
+    }
+    .row.even.three-col .cell {
+        @include column(1/3);
+    }
+    .row.even.four-col .cell {
+        @include column(1/4);
+    }
+    .cell.two-twelve {
+        @include column(2/12)
+    }
+    .cell.three-twelve {
+        @include column(3/12)
+    }
+    .cell.five-twelve {
+        @include column(5/12)
+    }
+    .cell.eight-twelve {
+        @include column(8/12)
+    }
+    .cell.nine-twelve {
+        @include column(9/12)
+    }
+    .cell.two-eleven {
+        @include column(2/11)
+    }
+    .cell.four-eleven {
+        @include column(4/11)
+    }
+    .cell.one-eleven {
+        @include column(1/11)
+    }
+}

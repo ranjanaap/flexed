@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexed Demo</title>
+    <link rel="stylesheet" href="dist/app.css">
+</head>
+
+<body>
+    <section>
+        <h2>Example with even row & column classes</h2>
+        <div class="row even one-col">
+            <div class="cell">
+                <p>1/1</p>
+            </div>
+        </div>
+        <div class="row even two-col">
+            <div class="cell">
+                <p>1/2</p>
+            </div>
+            <div class="cell">
+                <p>1/2</p>
+            </div>
+        </div>
+        <div class="row even three-col">
+            <div class="cell">
+                <p>1/3</p>
+            </div>
+            <div class="cell">
+                <p>1/3</p>
+            </div>
+            <div class="cell">
+                <p>1/3</p>
+            </div>
+        </div>
+        <div class="row even four-col">
+            <div class="cell">
+                <p>1/4</p>
+            </div>
+            <div class="cell">
+                <p>1/4</p>
+            </div>
+            <div class="cell">
+                <p>1/4</p>
+            </div>
+            <div class="cell">
+                <p>1/4</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Example with uneven row & column classes</h2>
+        <div class="row uneven">
+            <div class="cell three-twelve">
+                <p>3/12</p>
+            </div>
+            <div class="cell nine-twelve">
+                <p>9/12</p>
+            </div>
+        </div>
+        <div class="row uneven">
+            <div class="cell two-twelve">
+                <p>2/12</p>
+            </div>
+            <div class="cell eight-twelve">
+                <p>8/12</p>
+            </div>
+            <div class="cell two-twelve">
+                <p>2/12</p>
+            </div>
+        </div>
+        <div class="row uneven">
+            <div class="cell two-eleven">
+                <p>2/11</p>
+            </div>
+            <div class="cell four-eleven">
+                <p>4/11</p>
+            </div>
+            <div class="cell one-eleven">
+                <p>1/11</p>
+            </div>
+            <div class="cell four-eleven">
+                <p>4/11</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Example with nested grid</h2>
+        <div class="row uneven">
+            <div class="cell three-twelve">
+                <p>3/12</p>
+            </div>
+            <div class="cell nine-twelve">
+                <p>9/12</p>
+                <div class="nested">
+                    <aside>
+                        <p>Aside</p>
+                    </aside>
+                    <main>
+                        <p>Main</p>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

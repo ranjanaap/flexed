@@ -1,0 +1,89 @@
+//Default Variables
+$row-width: 100% !default;
+//Unitless, will be converted to %
+$gutter-width:1 !default;
+$breakpoints: ( thin: 36em, wide: 46em, full: 60em) !default;
+
+
+/// Mixin to create a grid container(row) based on flexbox.
+/// This mixin essentially creates a flexbox grid row to contain one or more flexbox grid columns
+///
+/// @group flexed
+///
+/// @param {Width} $max-row-width [100%] - Element's width
+/// @param {Boolean} $center [false] - true / false
+///
+/// @example scss - Example
+///   .foo {
+///     @include conatiner(1200px);
+///   }
+/// @example scss - Output
+///   .foo {
+///     margin: 0 auto;
+///     max-width: 100%;
+///     display: flex;
+///     flex-wrap: wrap;
+///     justify-content: space-between;
+///   }
+@mixin container ($max-row-width: $row-width, $center: false ) {
+    margin: 0 auto;
+    max-width: $max-row-width;
+    display: flex;
+    flex-wrap: wrap;
+    @if $center == true {
+        justify-content: center;
+    } @else {
+        justify-content: space-between;
+    }
+}
+
+/// Mixin to create a grid column(row) based on flexbox.
+/// This mixin creates a flexbox grid column
+///
+/// @group flexed
+///
+/// @param {Width} $width [1] - Column width converted to percentage
+/// @param {Width} $gutter [1] - Gutter width
+///
+/// @example scss - Example
+///   .bar {
+///     @include column(1/2);
+///   }
+/// @example scss - Output
+///   .foo {
+///     width: 49.5%;
+///   }
+@mixin column ($width:1, $gutter: $gutter-width) {
+    $percentage: percentage($width);
+    width: $percentage - ($gutter-width - $width * $gutter-width);
+}
+
+
+/// Media query Mixin for map based breakpoint.
+/// This mixin creates a media query block
+///
+/// @group flexed
+///
+/// @param {Name} $name - thin(36em), wide(46em), full(60em)
+///
+/// @example scss - Example
+///   @include breakpoint(full) {
+///     .baz { color: black; }
+///   }
+/// @example scss - Output
+///   @media (min-width: 60em) {
+///     .baz { color: black; }
+///   }
+@mixin breakpoint($name) {
+    @if not map-has-key($breakpoints, $name) {
+        @warn "Warning: `#{$name}` is not a valid breakpoint name.";
+    }
+    @else {
+        @media (min-width: map-get($breakpoints, $name)) {
+            @content;
+        }
+    }
+}
+
+//Border-box everything.
+*, *:before, *:after { box-sizing: border-box; }
