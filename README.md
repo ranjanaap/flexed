@@ -19,7 +19,7 @@ Browse to docs/index.html for documentation
 Use either method above or for your chosen task runner (gulp.js, Grunt, etc.), then in your stylesheet:
 
 ```scss
-@import "normalize";
+@import "flexed";
 ```
 
 ## gulp.js Usage
@@ -33,9 +33,9 @@ var sass = require('gulp-sass');
 gulp.task('sass', function () {
   gulp.src('path/to/input.scss')
     .pipe(sass({
-      // includePaths: require('node-normalize-scss').with('other/path', 'another/path')
+      // includePaths: require('flexed').with('other/path', 'another/path')
       // - or -
-      includePaths: require('node-normalize-scss').includePaths
+      includePaths: require('flexed').includePaths
     }))
     .pipe(gulp.dest('path/to/output.css'));
 });
@@ -57,9 +57,9 @@ grunt.initConfig({
   sass: {
     dist: {
       options: {
-        // includePaths: require('node-normalize-scss').with('other/path', 'another/path')
+        // includePaths: require('flexed').with('other/path', 'another/path')
         // - or -
-        includePaths: require('node-normalize-scss').includePaths
+        includePaths: require('flexed').includePaths
       },
       files: {
         'path/to/output.css': 'path/to/input.scss'
