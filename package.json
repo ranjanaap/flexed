@@ -1,13 +1,17 @@
 {
   "name": "flexed",
   "version": "0.0.1",
-  "description": "flexbox based grid",
-  "main": "index.html",
+  "description": "flexed - a flexbox based grid in scss",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ranjan Datta",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ranjanaap/flexed.git"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
