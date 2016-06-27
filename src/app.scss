@@ -55,7 +55,8 @@ pre {
     margin-bottom: 1.5rem;
 }
 
-.cell {
+.cell,
+.gcell {
     background-color: azure;
     border: 1px solid darkcyan;
     p {
@@ -121,6 +122,9 @@ pre {
             @include column(2/3);
         }
     }
+    .gcell {
+        @include column(1/2, 2);
+    }
 }
 
 
@@ -163,5 +167,9 @@ pre {
     }
     .cell.one-eleven {
         @include column(1/11)
+    }
+
+    .gcell {
+        @include column(1/2, 2);
     }
 }
