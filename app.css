@@ -462,12 +462,14 @@ pre {
   margin-bottom: 1.5rem;
 }
 
-.cell {
+.cell,
+.gcell {
   background-color: azure;
   border: 1px solid darkcyan;
 }
 
-.cell p {
+.cell p,
+.gcell p {
   text-align: center;
 }
 
@@ -543,6 +545,9 @@ pre {
   .nested main {
     width: 66.33333%;
   }
+  .gcell {
+    width: 49%;
+  }
 }
 
 @media (min-width: 60em) {
@@ -593,6 +598,9 @@ pre {
   }
   .cell.one-eleven {
     width: 8.18182%;
+  }
+  .gcell {
+    width: 49%;
   }
 }
 
