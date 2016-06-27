@@ -1,44 +1,3 @@
-@charset "UTF-8";
-
-/// Default breakpoints.
-///
-/// @group flexed
-///
-/// @type map
-///
-/// @property {thin} thin [36em]
-///   Thinnest breakpoint setting for breakpoint mixin.
-///
-/// @property {wide} wide [46em]
-///   Medium breakpoint setting for breakpoint mixin.
-///
-/// @property {thin} full [60em]
-///   Widest breakpoint setting for breakpoint mixin.
-///
-/// @access public
-$breakpoints: ( thin: 36em, wide: 46em, full: 60em) !default;
-
-
-/// Default max-width for container mixin.
-///
-/// @group flexed
-///
-/// @type string
-///
-/// @access public
-$row-width: 100% !default;
-
-
-/// Default gutter converted to percentage for column mixin.
-///
-/// @group flexed
-///
-/// @type unitless
-///
-/// @access public
-$gutter-width:1 !default;
-
-
 /// Mixin to create a grid container(row) based on flexbox.
 /// This mixin essentially creates a flexbox grid row to contain one or more flexbox grid columns
 ///
@@ -119,6 +78,3 @@ $gutter-width:1 !default;
         }
     }
 }
-
-//Border-box everything.
-*, *:before, *:after { box-sizing: border-box; }

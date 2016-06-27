@@ -1,7 +1,7 @@
 var path = require('path');
 
 var flexedEntryPoint = require.resolve('flexed');
-var flexedDir = path.dirname(flexedEntryPoint);
+var flexedDir = path.dirname(flexedEntryPoint) + '/flexed';
 
 function includePaths() {
   return flexedDir;
