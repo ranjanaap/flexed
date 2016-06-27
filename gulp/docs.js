@@ -3,10 +3,11 @@ module.exports = function (gulp, plugin) {
     'use strict';
 
     var sassdoc = require('sassdoc'),
+        doctheme = require('sassdoc-theme-flippant'),
         options = {
             dest: 'docs',
             verbose: true,
-            theme: plugin.flippant,
+            theme: doctheme,
             display: {
                 access: ['public', 'private'],
                 alias: true,
