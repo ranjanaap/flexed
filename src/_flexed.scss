@@ -39,7 +39,6 @@ $row-width: 100% !default;
 $gutter-width:1 !default;
 
 
-
 /// Mixin to create a grid container(row) based on flexbox.
 /// This mixin essentially creates a flexbox grid row to contain one or more flexbox grid columns
 ///
@@ -71,6 +70,7 @@ $gutter-width:1 !default;
         justify-content: space-between;
     }
 }
+
 
 /// Mixin to create a grid column(row) based on flexbox.
 /// This mixin creates a flexbox grid column
