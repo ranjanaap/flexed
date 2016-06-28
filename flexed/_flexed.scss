@@ -4,4 +4,8 @@
 @import "grid/index";
 
 //Border-box everything.
-*, *:before, *:after { box-sizing: border-box; }
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}

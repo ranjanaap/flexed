@@ -2,14 +2,11 @@ module.exports = function (gulp, plugin) {
 
     'use strict';
 
-    var normalize = require('node-normalize-scss');
-
     return function () {
 
         gulp.src('./src/app.scss')
             .pipe(plugin.sourcemaps.init())
             .pipe(plugin.sass({
-                includePaths: normalize.includePaths,
                 sourcemap: true,
                 outputStyle: 'expanded'
             }).on('error', plugin.sass.logError))

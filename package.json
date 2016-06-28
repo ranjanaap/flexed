@@ -1,6 +1,6 @@
 {
   "name": "flexed",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "flexed - a flexbox based grid in scss",
   "main": "index.js",
   "scripts": {

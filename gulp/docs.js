@@ -22,7 +22,7 @@ module.exports = function (gulp, plugin) {
 
     return function () {
 
-        gulp.src(['./src/bourbon5/**/*.scss','./src/_flexed.scss'])
+        gulp.src(['flexed/**/*.scss'])
             .pipe(sassdoc(options));
     };
 };
