@@ -17,12 +17,12 @@ module.exports = function (gulp, plugin) {
                 'undefined': 'Bourbon',
                 flexed: 'Flexed'
             },
-            basePath: 'https://github.com/SassDoc/sassdoc', // our git repo
+            basePath: 'https://github.com/ranjanaap/flexed/blob/4293ca33feb49015f576cda6c475337a36f09c3b/flexed/', // our git repo
         };
 
     return function () {
 
-        gulp.src(['flexed/**/*.scss'])
+        gulp.src(['./flexed/**/*.scss'])
             .pipe(sassdoc(options));
     };
 };
