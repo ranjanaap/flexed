@@ -49,7 +49,7 @@
 ///   }
 @mixin column ($width:1, $gutter: $gutter-width) {
     $percentage: percentage($width);
-    width: $percentage - ($gutter - $width * $gutter);
+    width: calc(#{$percentage} - #{$gutter/2});
 }
 
 

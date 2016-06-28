@@ -122,7 +122,7 @@ pre {
         }
     }
     .gcell {
-        @include column(1/2, 2);
+        @include column(1/2, 20px);
     }
 }
 
@@ -169,6 +169,6 @@ pre {
     }
 
     .gcell {
-        @include column(1/2, 2);
+        @include column(1/2, 20px);
     }
 }
