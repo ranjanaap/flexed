@@ -88,40 +88,40 @@ pre {
     justify-content: space-between;
   }
   .row.even.one-col .cell {
-    width: 100%;
+    width: calc(100% - 5px);
   }
   .row.even.two-col .cell {
-    width: 49.5%;
+    width: calc(50% - 5px);
   }
   .row.even.three-col .cell {
-    width: 100%;
+    width: calc(100% - 5px);
   }
   .row.even.four-col .cell {
-    width: 100%;
+    width: calc(100% - 5px);
   }
   .cell.two-twelve {
-    width: 100%;
+    width: calc(100% - 5px);
   }
   .cell.three-twelve {
-    width: 100%;
+    width: calc(100% - 5px);
   }
   .cell.five-twelve {
-    width: 100%;
+    width: calc(100% - 5px);
   }
   .cell.eight-twelve {
-    width: 100%;
+    width: calc(100% - 5px);
   }
   .cell.nine-twelve {
-    width: 100%;
+    width: calc(100% - 5px);
   }
   .cell.two-eleven {
-    width: 100%;
+    width: calc(100% - 5px);
   }
   .cell.four-eleven {
-    width: 100%;
+    width: calc(100% - 5px);
   }
   .cell.one-eleven {
-    width: 100%;
+    width: calc(100% - 5px);
   }
   .nested {
     margin: 0 auto;
@@ -136,13 +136,13 @@ pre {
     justify-content: space-between;
   }
   .nested aside {
-    width: 32.66667%;
+    width: calc(33.33333% - 5px);
   }
   .nested main {
-    width: 66.33333%;
+    width: calc(66.66667% - 5px);
   }
   .gcell {
-    width: 49%;
+    width: calc(50% - 10px);
   }
 }
 
@@ -160,43 +160,43 @@ pre {
     justify-content: space-between;
   }
   .row.even.one-col .cell {
-    width: 100%;
+    width: calc(100% - 5px);
   }
   .row.even.two-col .cell {
-    width: 49.5%;
+    width: calc(50% - 5px);
   }
   .row.even.three-col .cell {
-    width: 32.66667%;
+    width: calc(33.33333% - 5px);
   }
   .row.even.four-col .cell {
-    width: 24.25%;
+    width: calc(25% - 5px);
   }
   .cell.two-twelve {
-    width: 15.83333%;
+    width: calc(16.66667% - 5px);
   }
   .cell.three-twelve {
-    width: 24.25%;
+    width: calc(25% - 5px);
   }
   .cell.five-twelve {
-    width: 41.08333%;
+    width: calc(41.66667% - 5px);
   }
   .cell.eight-twelve {
-    width: 66.33333%;
+    width: calc(66.66667% - 5px);
   }
   .cell.nine-twelve {
-    width: 74.75%;
+    width: calc(75% - 5px);
   }
   .cell.two-eleven {
-    width: 17.36364%;
+    width: calc(18.18182% - 5px);
   }
   .cell.four-eleven {
-    width: 35.72727%;
+    width: calc(36.36364% - 5px);
   }
   .cell.one-eleven {
-    width: 8.18182%;
+    width: calc(9.09091% - 5px);
   }
   .gcell {
-    width: 49%;
+    width: calc(50% - 10px);
   }
 }
 
