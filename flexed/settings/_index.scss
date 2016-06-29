@@ -4,17 +4,20 @@
 ///
 /// @type map
 ///
-/// @property {thin} thin [36em]
+/// @property {thin} thin [30em]
 ///   Thinnest breakpoint setting for breakpoint mixin.
 ///
-/// @property {wide} wide [46em]
+/// @property {normal} normal [48em]
 ///   Medium breakpoint setting for breakpoint mixin.
 ///
-/// @property {thin} full [60em]
+/// @property {wide} wide [61.25em]
+///   Widest breakpoint setting for breakpoint mixin.
+///
+/// @property {full} full [80em]
 ///   Widest breakpoint setting for breakpoint mixin.
 ///
 /// @access public
-$breakpoints: ( thin: 36em, wide: 46em, full: 60em) !default;
+$breakpoints: ( thin: 30em, normal: 48em, wide: 61.25em, full: 80em) !default;
 
 
 /// Default max-width for container mixin.
