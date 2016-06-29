@@ -74,7 +74,7 @@ pre {
   border: dashed 1px darkcyan;
 }
 
-@media (min-width: 46em) {
+@media (min-width: 61.25em) {
   .row {
     margin: 0 auto;
     max-width: 100%;
@@ -146,7 +146,7 @@ pre {
   }
 }
 
-@media (min-width: 60em) {
+@media (min-width: 48em) {
   .row {
     margin: 0 auto;
     max-width: 100%;
