@@ -16,8 +16,7 @@ module.exports = function (gulp, plugin) {
             groups: {
                 'undefined': 'Flexed',
                 flexed: 'Flexed'
-            },
-            basePath: 'https://github.com/ranjanaap/flexed', // our git repo
+            }
         };
 
     return function () {
