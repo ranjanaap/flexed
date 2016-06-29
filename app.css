@@ -200,4 +200,54 @@ pre {
   }
 }
 
+.radius-example {
+  display: inline-block;
+  line-height: 100px;
+  border: solid 2px darksalmon;
+  padding: 0 10px;
+}
+
+.radius-example.same-radius {
+  border-radius: 16px;
+}
+
+.radius-example.custom-radius {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 32px;
+}
+
+.border-example {
+  display: inline-block;
+  line-height: 100px;
+  padding: 0 10px;
+}
+
+.border-example.border {
+  border: 1px solid #000;
+}
+
+.border-example.custom-border {
+  border-top: solid 1px #333;
+  border-bottom: solid 1px #333;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+@font-face {
+  font-family: "Museo";
+  src: url("https://dq25e8j0im0tm.cloudfront.net/fonts/museo/museo-sans-500.woff") format("woff"), url("https://dq25e8j0im0tm.cloudfront.net/fonts/museo/museo-sans-500.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.museo {
+  font-family: Museo;
+}
+
 /*# sourceMappingURL=app.css.map */
