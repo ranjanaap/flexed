@@ -5,14 +5,11 @@ Online Docs: https://ranjanaap.github.io/flexed/
 
 ###Install
 
-1. `npm install flexed --save-dev` to get from npm
-3. `gulp compile:css` to compile css
-4. `gulp generate:docs` to generate docs
+```scss
+npm install flexed --save-dev
+```
 
-Open index.html for example 
-
-Browse to docs/index.html for documentation
-
+Browse to node_modules/flexed/index.html for examples
 
 ### Stylesheet usage
 
