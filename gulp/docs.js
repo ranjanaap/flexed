@@ -17,7 +17,7 @@ module.exports = function (gulp, plugin) {
                 'undefined': 'Flexed',
                 flexed: 'Flexed'
             },
-            basePath: 'https://github.com/ranjanaap/flexed/blob/4293ca33feb49015f576cda6c475337a36f09c3b/flexed/', // our git repo
+            basePath: 'https://github.com/ranjanaap/flexed/', // our git repo
         };
 
     return function () {
