@@ -1,0 +1,45 @@
+/// Mixin to create border for an element.
+/// This mixin creates border for an element. Sides can be specified as top, right, bottom, left
+///
+/// @group flexed
+///
+/// @param {size} $border [1px solid #000] - Border
+///
+/// @example scss - Example
+///   .foo {
+///     @include border(1px solid #333);
+///   }
+/// @example scss - Output
+///   .foo {
+///     border: 1px solid  #333;
+///   }
+///
+/// @example scss - Example
+///   .bar {
+///     @include border(1px solid  #333, top bottom);
+///   }
+/// @example scss - Output
+///   .bar {
+///     border-top: 1px solid  #333;
+///     border-bottom: 1px solid  #333;
+///   }
+@mixin border($style:$border, $sides:"") {
+    @if ($style != "") {
+
+        @if ($sides == "") {
+            border: $style;
+
+        } @else {
+            @each $side in $sides {
+               @if ($side == 'top' or
+                    $side == 'right' or
+                    $side == 'bottom' or
+                    $side == 'left') {
+
+                    border-#{$side}: $style;
+                }
+            }
+        }  
+
+    }
+}

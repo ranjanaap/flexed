@@ -11,7 +11,7 @@ gulp.task('generate:docs', require('./gulp/docs')(gulp, plugin));
 gulp.task('watch', function () {
     'use strict';
 
-    var scss = gulp.watch(['./src/**/*', './flexed/**.*'], ['compile:css', 'generate:docs']),
+    var scss = gulp.watch(['src/**/*', 'flexed/**/*'], ['compile:css', 'generate:docs']),
         changed = function (event) {
             console.log('File ' + event.path + ' was ' + event.type + '. Running tasks...');
         };

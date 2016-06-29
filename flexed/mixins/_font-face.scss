@@ -1,0 +1,34 @@
+/// Mixin for custom fonts.
+/// This mixin font-face declarations for custom fonts. 
+///
+/// @group flexed
+///
+/// @param {font} $font-name - Font Name
+///
+///
+/// @param {url} $font-file - Font File
+///
+///
+/// @param {weight} $font-weight [normal] - Font Weight
+///
+/// @param {style} $font-style [normal] - Font Style
+///
+/// @example scss - Example
+///   @include font-face('Museo', 'museo-sans-500');
+///
+/// @example scss - Output
+///   @font-face {
+///     font-family: "Museo";
+///     src: url("museo-sans-500.woff") format("woff"), url("museo-sans-500.woff2") format("woff2");
+///     font-weight: normal;
+///     font-style: normal;
+///   }
+@mixin font-face($font-name, $font-file, $font-weight: normal, $font-style: normal) {
+    @font-face {
+        font-family: '#{$font-name}';
+        src: url('#{$font-file}.woff') format('woff'),
+             url('#{$font-file}.woff2') format('woff2'); 
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+}

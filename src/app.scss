@@ -172,3 +172,42 @@ pre {
         @include column(1/2, 20px);
     }
 }
+
+
+.radius-example {
+    display: inline-block;
+    line-height: 100px;
+    border: solid 2px darksalmon;
+    padding: 0 10px;
+    
+    &.same-radius {
+        @include border-radius(16px);
+    }
+    &.custom-radius {
+        @include border-radius(4px, 8px, 16px, 32px);
+    }
+}
+
+.border-example {
+    display: inline-block;
+    line-height: 100px;
+    padding: 0 10px;
+    
+    &.border {
+        @include border();
+    }
+    
+    &.custom-border {
+        @include border(solid 1px #333, top bottom);
+    }
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+@include font-face('Museo', 'https://dq25e8j0im0tm.cloudfront.net/fonts/museo/museo-sans-500')
+
+.museo  {
+    font-family: Museo;
+}

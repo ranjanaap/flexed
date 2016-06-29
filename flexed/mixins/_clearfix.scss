@@ -1,0 +1,22 @@
+/// Provides an easy way to include a clearfix for containing floats.
+///
+/// @group flexed
+///
+/// @example scss
+///   .element {
+///     @include clearfix;
+///   }
+///
+/// @example css
+///   .element::after {
+///     clear: both;
+///     content: "";
+///     display: block;
+///   }
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}

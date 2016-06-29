@@ -27,7 +27,7 @@ $breakpoints: ( thin: 36em, wide: 46em, full: 60em) !default;
 $row-width: 100% !default;
 
 
-/// Default gutter converted to percentage for column mixin.
+/// Default gutter for column mixin.
 ///
 /// @group flexed
 ///
@@ -35,3 +35,23 @@ $row-width: 100% !default;
 ///
 /// @access public
 $gutter-width:10px !default;
+
+
+/// Default radius for border-radius mixin.
+///
+/// @group flexed
+///
+/// @type string
+///
+/// @access public
+$border-radius:6px !default;
+
+
+/// Default border for border mixin.
+///
+/// @group flexed
+///
+/// @type string
+///
+/// @access public
+$border:1px solid #000 !default;
