@@ -1,0 +1,32 @@
+/// Mixin to size an element.
+/// This mixin sets width and height for an element. 
+///
+/// @group flexed
+///
+/// @param {width} $width - Width
+///
+/// @param {height} $height [$width] - Height
+///
+/// @example scss - Example
+///   .foo {
+///     @include size(100px);
+///   }
+/// @example scss - Output
+///   .foo {
+///     width: 100px;
+///     height: 100px;
+///   }
+///
+/// @example scss - Example
+///   .bar {
+///     @include size(400px, 300px);
+///   }
+/// @example scss - Output
+///   .bar {
+///     width: 400px;
+///     height: 300px;
+///   }
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}

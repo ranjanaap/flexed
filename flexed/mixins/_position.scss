@@ -1,0 +1,40 @@
+$position-default: null !default;
+/// Mixin for defining position.
+/// This mixin sets the position of an element. 
+///
+/// @group flexed
+///
+/// @param {type} $type - absolute, relative, fixed
+///
+/// @param {top} $top [null] - top
+///
+/// @param {right} $right [null] - right
+///
+/// @param {bottom} $bottom [null] - bottom
+///
+/// @param {left} $left [null] - left
+///
+/// @example scss - Example
+///    .foo {
+///       @include position(absolute,null,null,10px,15px);
+///    }
+///
+/// @example scss - Output
+///   .foo {
+///        position: absolute;
+///        bottom: 10px;
+///        left: 15px;
+///    }
+@mixin position($type, $top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+    position: $type;
+    $allowed_types: absolute relative fixed;
+    @if not index($allowed_types, $type) {
+        @warn "Unknown position: #{$type}.";
+    }
+    @each $data in top $top,
+    right $right,
+    bottom $bottom,
+    left $left {
+        #{nth($data, 1)}: nth($data, 2);
+    }
+}

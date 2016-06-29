@@ -1,0 +1,117 @@
+/// Helper for arrow mixin
+$arrow-size-default: 20px !default;
+$arrow-color-default: #fff !default;
+
+@mixin arrow_helper($arrowSize, $arrowColor, $margin, $side, $align) {
+    @if $side=="top" {
+        border-bottom-color: $arrowColor;
+        top: -2 * $arrowSize;
+    }
+    @if $side=="bottom" {
+        border-top-color: $arrowColor;
+        bottom: -2 * $arrowSize;
+    }
+    @if $side=="left" {
+        border-right-color: $arrowColor;
+        left: -2 * $arrowSize;
+    }
+    @if $side=="right" {
+        border-left-color: $arrowColor;
+        right: -2 * $arrowSize;
+    }
+    @if $side=="right" or $side=="left" {
+        @if $align=="center" {
+            top: 50%;
+            margin-top: -$arrowSize;
+        }
+        @else if $align=="top" {
+            top: $margin;
+        }
+        @else if $align=="bottom" {
+            bottom: $margin;
+        }
+    }
+    @if $side=="bottom" or $side=="top" {
+        @if $align=="center" {
+            right: 50%;
+            margin-right: -$arrowSize;
+        }
+        @else if $align=="left" {
+            left: $margin;
+        }
+        @else if $align=="right" {
+            right: $margin;
+        }
+    }
+}
+
+
+/// Mixin for creating arrows.
+/// This mixin font-face declarations for custom fonts. 
+///
+/// @group flexed
+///
+/// @param {side} $side [right] - right, left, top or bottom
+///
+/// @param {align} $align [center] - center, top, bottom, left, right
+///
+/// @param {size} $size [20px] - Arrow size
+///
+/// @param {color} $color [#fff] - Arrow color
+///
+/// @param {borderColor} $borderColor [none] - Border color (optional)
+///
+/// @param {borderSize} $borderSize [1px] - Border size (optional)
+///
+/// @example scss - Example
+///    .foo {
+///       @include arrow('top', 'left', 10px, #eee, #4fade3, 6px);
+///    }
+///
+/// @example scss - Output
+///   .foo:after, .foo:before {
+///        border: solid transparent;
+///        content: " ";
+///        height: 0;
+///        width: 0;
+///        position: absolute;
+///        pointer-events: none;
+///        visibility: visible;
+///    }
+///    .foo:after {
+///        border-width: 10px;
+///        border-bottom-color: #eee;
+///        top: -20px;
+///        left: 10px;
+///    }
+///    .foo:before {
+///        border-width: 16px;
+///        border-bottom-color: #4fade3;
+///        top: -32px;
+///        left: 4px;
+///    }
+@mixin arrow($side: "right", $align: "center", $size: $arrow-size-default, $color: $arrow-color-default, $borderColor: "none", $borderSize: 1px) {
+    $selector: "&:after, &:before";
+    @if $borderColor=="none" {
+        $selector: "&:after";
+    }
+    #{$selector} {
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        visibility: visible;
+    }
+    &:after {
+        border-width: $size;
+        @include arrow_helper($size, $color, $size, $side, $align);
+    }
+    @if $borderColor !="none" {
+        &:before {
+            border-width: $borderSize + $size;
+            @include arrow_helper($size + $borderSize, $borderColor, $size - $borderSize, $side, $align);
+        }
+    }
+}

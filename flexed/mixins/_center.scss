@@ -1,0 +1,33 @@
+/// Mixin to center an absolutely positioned element.
+/// This mixin centers an absolutely positioned element within its parents. 
+///
+/// @group flexed
+///
+/// @param {direction} $direction - vertical, horizontal, both
+///
+/// @example scss - Example
+///   .foo {
+///     @include center(both);
+///   }
+/// @example scss - Output
+///   .foo {
+///     top: 50%;
+///     left: 50%
+///     transform: translate(-50%, -50%);
+///   }
+@mixin center($direction) {
+    position: absolute;
+    @if $direction=='vertical' {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @else if $direction=='horizontal' {
+        left: 50%;
+        transform: translate(-50%);
+    }
+    @else if $direction=='both' {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

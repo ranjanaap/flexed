@@ -1,5 +1,4 @@
 @import "../flexed/flexed";
-
 body {
     margin: 2rem auto;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -112,11 +111,9 @@ pre {
     }
     .nested {
         @include container();
-        
         aside {
             @include column(1/3);
         }
-        
         main {
             @include column(2/3);
         }
@@ -125,7 +122,6 @@ pre {
         @include column(1/2, 20px);
     }
 }
-
 
 @include breakpoint(full) {
     .row {
@@ -167,19 +163,16 @@ pre {
     .cell.one-eleven {
         @include column(1/11)
     }
-
     .gcell {
         @include column(1/2, 20px);
     }
 }
-
 
 .radius-example {
     display: inline-block;
     line-height: 100px;
     border: solid 2px darksalmon;
     padding: 0 10px;
-    
     &.same-radius {
         @include border-radius(16px);
     }
@@ -192,11 +185,9 @@ pre {
     display: inline-block;
     line-height: 100px;
     padding: 0 10px;
-    
     &.border {
         @include border();
     }
-    
     &.custom-border {
         @include border(solid 1px #333, top bottom);
     }
@@ -206,8 +197,126 @@ pre {
     @include clearfix;
 }
 
-@include font-face('Museo', 'https://dq25e8j0im0tm.cloudfront.net/fonts/museo/museo-sans-500')
-
-.museo  {
+@include font-face('Museo', 'https://dq25e8j0im0tm.cloudfront.net/fonts/museo/museo-sans-500') .museo {
     font-family: Museo;
+}
+
+.box-with-border,
+.box {
+    @include size(28%, 100px)
+    background: #4fade3;
+    margin: 24px;
+    display: inline-block;
+    position: relative;
+    span {
+        color: #f1f1f1;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 100%;
+        left: 0;
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+.box-with-border {
+    border: 4px solid #4fade3;
+    background: #eee;
+    span {
+        color: #4fade3;
+    }
+}
+
+.box {
+    &.arrow-top-left {
+        @include arrow('top', 'left', 10px, #4fade3);
+    }
+    &.arrow-top-right {
+        @include arrow('top', 'right', 10px, #4fade3);
+    }
+    &.arrow-top-center {
+        @include arrow('top', 'center', 10px, #4fade3);
+    }
+    &.arrow-bottom-left {
+        @include arrow('bottom', 'left', 10px, #4fade3);
+    }
+    &.arrow-bottom-right {
+        @include arrow('bottom', 'right', 10px, #4fade3);
+    }
+    &.arrow-bottom-center {
+        @include arrow('bottom', 'center', 10px, #4fade3);
+    }
+    &.arrow-left-top {
+        @include arrow('left', 'top', 10px, #4fade3);
+    }
+    &.arrow-left-center {
+        @include arrow('left', 'center', 10px, #4fade3);
+    }
+    &.arrow-left-bottom {
+        @include arrow('left', 'bottom', 10px, #4fade3);
+    }
+    &.arrow-right-top {
+        @include arrow('right', 'top', 10px, #4fade3);
+    }
+    &.arrow-right-center {
+        @include arrow('right', 'center', 10px, #4fade3);
+    }
+    &.arrow-right-bottom {
+        @include arrow('right', 'bottom', 10px, #4fade3);
+    }
+}
+;
+.box-with-border {
+    &.arrow-top-left {
+        @include arrow('top', 'left', 10px, #eee, #4fade3, 6px);
+    }
+    &.arrow-top-right {
+        @include arrow('top', 'right', 10px, #eee, #4fade3, 6px);
+    }
+    &.arrow-top-center {
+        @include arrow('top', 'center', 10px, #eee, #4fade3, 6px);
+    }
+    &.arrow-bottom-left {
+        @include arrow('bottom', 'left', 10px, #eee, #4fade3, 6px);
+    }
+    &.arrow-bottom-right {
+        @include arrow('bottom', 'right', 10px, #eee, #4fade3, 6px);
+    }
+    &.arrow-bottom-center {
+        @include arrow('bottom', 'center', 10px, #eee, #4fade3, 6px);
+    }
+    &.arrow-left-top {
+        @include arrow('left', 'top', 10px, #eee, #4fade3, 6px);
+    }
+    &.arrow-left-center {
+        @include arrow('left', 'center', 10px, #eee, #4fade3, 6px);
+    }
+    &.arrow-left-bottom {
+        @include arrow('left', 'bottom', 10px, #eee, #4fade3, 6px);
+    }
+    &.arrow-right-top {
+        @include arrow('right', 'top', 10px, #eee, #4fade3, 6px);
+    }
+    &.arrow-right-center {
+        @include arrow('right', 'center', 10px, #eee, #4fade3, 6px);
+    }
+    &.arrow-right-bottom {
+        @include arrow('right', 'bottom', 10px, #eee, #4fade3, 6px);
+    }
+}
+
+.center-holder {
+    position: relative;
+    height: 300px;
+    @include border;
+    
+    .centered {
+        background-color: aqua;
+        color: aliceblue;
+        @include size(100px);
+        @include center(both);
+    }
 }
