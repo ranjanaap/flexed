@@ -1,7 +1,7 @@
 /// Mixin to create a grid container(row) based on flexbox.
 /// This mixin essentially creates a flexbox grid row to contain one or more flexbox grid columns
 ///
-/// @group flexed
+/// @group grid
 ///
 /// @param {Width} $max-row-width [100%] - Element's width
 /// @param {Boolean} $center [false] - true / false
@@ -34,7 +34,7 @@
 /// Mixin to create a grid column(row) based on flexbox.
 /// This mixin creates a flexbox grid column
 ///
-/// @group flexed
+/// @group grid
 ///
 /// @param {Width} $width [1] - Column width converted to percentage
 /// @param {Width} $gutter [1] - Gutter width
@@ -56,7 +56,7 @@
 /// Media query Mixin for map based breakpoint.
 /// This mixin creates a media query block
 ///
-/// @group flexed
+/// @group grid
 ///
 /// @param {Name} $name - thin(30em) OR normal(48em) OR wide(61.25em) OR full(80em)
 ///

@@ -1,7 +1,7 @@
 /// Mixin to create border for an element.
 /// This mixin creates border for an element. Sides can be specified as top, right, bottom, left
 ///
-/// @group flexed
+/// @group utility
 ///
 /// @param {size} $border [1px solid #000] - Border
 ///
@@ -39,7 +39,7 @@
                     border-#{$side}: $style;
                 }
             }
-        }  
+        }
 
     }
 }

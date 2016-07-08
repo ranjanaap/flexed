@@ -1,0 +1,64 @@
+/// Block
+/// @type map
+///
+/// @group variables
+///
+/// @prop {string} prefix [''] - Prefix for blocks.
+$bem-block: ( 'prefix': '' ) !default;
+/// Element
+/// @type map
+///
+/// @group variables
+///
+/// @prop {string} prefix ['__'] - Prefix for elements, separating them from blocks and modifiers.
+$bem-element: ( 'prefix': '__' ) !default;
+/// Modifier
+/// @type map
+///
+/// @group variables
+///
+/// @prop {string} prefix ['--'] - Prefix for modifiers, separating them from blocks and elements.
+$bem-modifier: ( 'prefix': '--' ) !default;
+
+/// Block mixin
+///
+/// @group bem
+///
+/// @param {string} $block - Name of the block.
+@mixin block($block) {
+  .#{map-get($bem-block, 'prefix') + $block)} {
+      @content;
+  }
+};
+
+/// Element mixin
+///
+/// @group bem
+///
+/// @param {string} $element - Name of the element.
+@mixin element($element) {
+  @if & {
+    &#{map-get($bem-element, 'prefix') + $element} {
+      @content;
+    }
+  }
+  @else {
+    @warn 'Elements should have an associated block. Currently, only nesting is supported.';
+  }
+}
+
+/// Modifier mixin
+///
+/// @group bem
+///
+/// @param {string} $modifier - Name of the modifier.
+@mixin modifier($modifier) {
+  @if & {
+    &#{map-get($bem-modifier, 'prefix') + $modifier} {
+      @content;
+    }
+  }
+  @else {
+    @warn 'Modifiers should have an associated block. Currently, only nesting is supported.';
+  }
+}

@@ -312,11 +312,40 @@ pre {
     position: relative;
     height: 300px;
     @include border;
-    
+
     .centered {
         background-color: aqua;
         color: aliceblue;
         @include size(100px);
         @include center(both);
     }
+}
+
+@include block('media') {
+    width: 400px;
+    padding: 10px;
+    @include border;
+    @include container;
+
+    @include element('img') {
+        background-color: lighten(#4fade3, 50%);
+        @include modifier('small') {
+            @include column(1/4);
+            padding: 2px;
+        }
+    }
+
+
+
+    @include element('body') {
+        @include column(3/4);
+
+        p,
+        h3 {
+            margin: 0;
+            padding: 0;
+            font-size: .6rem;
+        }
+    }
+
 }

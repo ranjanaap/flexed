@@ -1,7 +1,7 @@
 /// Mixin for custom fonts.
-/// This mixin inserts font-face declarations for custom fonts. 
+/// This mixin inserts font-face declarations for custom fonts.
 ///
-/// @group flexed
+/// @group utility
 ///
 /// @param {font} $font-name - Font Name
 ///
@@ -27,7 +27,7 @@
     @font-face {
         font-family: '#{$font-name}';
         src: url('#{$font-file}.woff') format('woff'),
-             url('#{$font-file}.woff2') format('woff2'); 
+             url('#{$font-file}.woff2') format('woff2');
         font-weight: $font-weight;
         font-style: $font-style;
     }
