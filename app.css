@@ -804,4 +804,40 @@ pre {
   transform: translate(-50%, -50%);
 }
 
+.media {
+  width: 400px;
+  padding: 10px;
+  border: 1px solid #000;
+  margin: 0 auto;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.media__img {
+  background-color: white;
+}
+
+.media__img--small {
+  width: calc(25% - 5px);
+  padding: 2px;
+}
+
+.media__body {
+  width: calc(75% - 5px);
+}
+
+.media__body p,
+.media__body h3 {
+  margin: 0;
+  padding: 0;
+  font-size: .6rem;
+}
+
 /*# sourceMappingURL=app.css.map */
