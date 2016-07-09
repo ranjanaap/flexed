@@ -1,6 +1,7 @@
 # flexed
 
-Online Docs: https://ranjanaap.github.io/flexed/
+Online Docs: https://ranjanaap.github.io/flexed/docs
+Online Examples: https://ranjanaap.github.io/flexed/example
 
 
 ###Install

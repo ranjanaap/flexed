@@ -5,7 +5,7 @@ module.exports = function (gulp, plugin) {
     var sassdoc = require('sassdoc'),
         doctheme = require('sassdoc-theme-flippant'),
         options = {
-            dest: 'docs',
+            dest: 'dist/docs',
             verbose: true,
             theme: doctheme,
             display: {

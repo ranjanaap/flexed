@@ -4,6 +4,8 @@ module.exports = function (gulp, plugin) {
 
     return function () {
 
+        gulp.src('./src/index.html')
+            .pipe(gulp.dest('./dist/example'));
         gulp.src('./src/app.scss')
             .pipe(plugin.sourcemaps.init())
             .pipe(plugin.sass({
@@ -15,6 +17,6 @@ module.exports = function (gulp, plugin) {
                 cascade: false
             }))
             .pipe(plugin.sourcemaps.write('.'))
-            .pipe(gulp.dest('./dist/'));
+            .pipe(gulp.dest('./dist/example'));
     };
 };
