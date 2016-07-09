@@ -23,23 +23,18 @@
 ///     border-top: 1px solid  #333;
 ///     border-bottom: 1px solid  #333;
 ///   }
-@mixin border($style:$border, $sides:"") {
-    @if ($style != "") {
+@mixin border($style: $border, $sides: '') {
+    @if ($style != '') {
 
-        @if ($sides == "") {
+        @if ($sides == '') {
             border: $style;
 
         } @else {
             @each $side in $sides {
-               @if ($side == 'top' or
-                    $side == 'right' or
-                    $side == 'bottom' or
-                    $side == 'left') {
-
+                @if ($side == 'top' or $side == 'right' or $side == 'bottom' or $side == 'left') {
                     border-#{$side}: $style;
                 }
             }
         }
-
     }
 }

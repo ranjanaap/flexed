@@ -1,44 +1,40 @@
 $arrow-size-default: 20px !default;
 $arrow-color-default: #fff !default;
 
-@mixin arrow_helper($arrowSize, $arrowColor, $margin, $side, $align) {
-    @if $side=="top" {
-        border-bottom-color: $arrowColor;
-        top: -2 * $arrowSize;
+@mixin arrow-helper($arrow-size, $arrow-color, $margin, $side, $align) {
+    @if $side == 'top' {
+        border-bottom-color: $arrow-color;
+        top: -2 * $arrow-size;
     }
-    @if $side=="bottom" {
-        border-top-color: $arrowColor;
-        bottom: -2 * $arrowSize;
+    @if $side == 'bottom' {
+        border-top-color: $arrow-color;
+        bottom: -2 * $arrow-size;
     }
-    @if $side=="left" {
-        border-right-color: $arrowColor;
-        left: -2 * $arrowSize;
+    @if $side == 'left' {
+        border-right-color: $arrow-color;
+        left: -2 * $arrow-size;
     }
-    @if $side=="right" {
-        border-left-color: $arrowColor;
-        right: -2 * $arrowSize;
+    @if $side == 'right' {
+        border-left-color: $arrow-color;
+        right: -2 * $arrow-size;
     }
-    @if $side=="right" or $side=="left" {
-        @if $align=="center" {
+    @if $side == 'right' or $side == 'left' {
+        @if $align == 'center' {
             top: 50%;
-            margin-top: -$arrowSize;
-        }
-        @else if $align=="top" {
+            margin-top: -$arrow-size;
+        } @else if $align == 'top' {
             top: $margin;
-        }
-        @else if $align=="bottom" {
+        } @else if $align == 'bottom' {
             bottom: $margin;
         }
     }
-    @if $side=="bottom" or $side=="top" {
-        @if $align=="center" {
+    @if $side == 'bottom' or $side == 'top' {
+        @if $align == 'center' {
             right: 50%;
-            margin-right: -$arrowSize;
-        }
-        @else if $align=="left" {
+            margin-right: -$arrow-size;
+        } @else if $align == 'left' {
             left: $margin;
-        }
-        @else if $align=="right" {
+        } @else if $align == 'right' {
             right: $margin;
         }
     }
@@ -58,9 +54,9 @@ $arrow-color-default: #fff !default;
 ///
 /// @param {color} $color [#fff] - Arrow color
 ///
-/// @param {borderColor} $borderColor [none] - Border color (optional)
+/// @param {border-color} $border-color [none] - Border color (optional)
 ///
-/// @param {borderSize} $borderSize [1px] - Border size (optional)
+/// @param {border-size} $border-size [1px] - Border size (optional)
 ///
 /// @example scss - Example
 ///    .foo {
@@ -89,28 +85,28 @@ $arrow-color-default: #fff !default;
 ///        top: -32px;
 ///        left: 4px;
 ///    }
-@mixin arrow($side: "right", $align: "center", $size: $arrow-size-default, $color: $arrow-color-default, $borderColor: "none", $borderSize: 1px) {
-    $selector: "&:after, &:before";
-    @if $borderColor=="none" {
-        $selector: "&:after";
+@mixin arrow($side: 'right', $align: 'center', $size: $arrow-size-default, $color: $arrow-color-default, $border-color: 'none', $border-size: 1px) {
+    $selector: '&:after, &:before';
+    @if $border-color == 'none' {
+        $selector: '&:after';
     }
     #{$selector} {
         border: solid transparent;
-        content: " ";
+        content: ' ';
         height: 0;
         width: 0;
         position: absolute;
         pointer-events: none;
         visibility: visible;
     }
-    &:after {
+    &::after {
         border-width: $size;
-        @include arrow_helper($size, $color, $size, $side, $align);
+        @include arrow-helper($size, $color, $size, $side, $align);
     }
-    @if $borderColor !="none" {
-        &:before {
-            border-width: $borderSize + $size;
-            @include arrow_helper($size + $borderSize, $borderColor, $size - $borderSize, $side, $align);
+    @if $border-color != 'none' {
+        &::before {
+            border-width: $border-size + $size;
+            @include arrow-helper($size + $border-size, $border-color, $size - $border-size, $side, $align);
         }
     }
 }

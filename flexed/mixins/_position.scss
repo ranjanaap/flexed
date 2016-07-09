@@ -1,10 +1,9 @@
-$position-default: null !default;
-/// Mixin for defining position.
+$position-default: null !default; /// Mixin for defining position.
 /// This mixin sets the position of an element.
 ///
 /// @group utility
 ///
-/// @param {type} $type - absolute, relative, fixed
+/// @param {type} $type [relative] - absolute, relative, fixed
 ///
 /// @param {top} $top [null] - top
 ///
@@ -16,7 +15,7 @@ $position-default: null !default;
 ///
 /// @example scss - Example
 ///    .foo {
-///       @include position(absolute,null,null,10px,15px);
+///       @include position(absolute, null null 10px 15px);
 ///    }
 ///
 /// @example scss - Output
@@ -25,16 +24,23 @@ $position-default: null !default;
 ///        bottom: 10px;
 ///        left: 15px;
 ///    }
-@mixin position($type, $top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
-    position: $type;
-    $allowed_types: absolute relative fixed;
-    @if not index($allowed_types, $type) {
-        @warn "Unknown position: #{$type}.";
+@mixin position ($pos: relative, $coords: null null null null) {
+    @if type-of($pos) == list {
+        $coords: $pos;
+        $pos: relative;
     }
-    @each $data in top $top,
-    right $right,
-    bottom $bottom,
-    left $left {
-        #{nth($data, 1)}: nth($data, 2);
+    $length: length($coords);
+    position: $pos;
+    @if $length > 0 {
+        top: nth($coords, 1);
+    }
+    @if $length > 1 {
+        right: nth($coords, 2);
+    }
+    @if $length > 2 {
+        bottom: nth($coords, 3);
+    }
+    @if $length > 3 {
+        left: nth($coords, 4);
     }
 }

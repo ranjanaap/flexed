@@ -1,5 +1,5 @@
 /// Mixin to create border radius for an element.
-/// This mixin creates border radius for an element. Radius can be specified as a single radius or as topLeft, topRight, bottomRight, bottomLeft
+/// This mixin creates border radius for an element. Radius can be specified as a single radius or as top-left, top-right, bottom-right, bottom-left
 ///
 /// @group utility
 ///
@@ -28,17 +28,16 @@
 @mixin border-radius($size...) {
     @if length($size) == 0 {
         border-radius: $border-radius;
-    }
-	@elseif length($size) == 1 {
-		border-radius: $size;
+    } @elseif length($size) == 1 {
+        border-radius: $size;
 	} @else {
-		@include _customBorderRadius($size...);
+        @include _custom-border-radius($size...);
 	}
 }
 
-@mixin _customBorderRadius($topLeft: 0, $topRight: 0, $bottomRight: 0, $bottomLeft: 0) {
-    @if $topLeft != 0 { border-top-left-radius: $topLeft; }
-    @if $topRight != 0 { border-top-right-radius: $topRight; }
-    @if $bottomRight != 0 { border-bottom-right-radius: $bottomRight; }
-    @if $bottomLeft != 0 { border-bottom-left-radius: $bottomLeft; }
+@mixin _custom-border-radius($top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0) {
+    @if $top-left != 0 { border-top-left-radius: $top-left; }
+    @if $top-right != 0 { border-top-right-radius: $top-right; }
+    @if $bottom-right != 0 { border-bottom-right-radius: $bottom-right; }
+    @if $bottom-left != 0 { border-bottom-left-radius: $bottom-left; }
 }

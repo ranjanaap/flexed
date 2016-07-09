@@ -1,10 +1,16 @@
-@import "../flexed/flexed";
+@import '../flexed/flexed';
+
+
+$blue: #4fade3;
+$white: #f1f1f1;
+$darkgray: #2f4f4f;
+
 body {
     margin: 2rem auto;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
     font-weight: 300;
-    background-color: cornsilk;
-    color: darkslategray;
+    background-color: $white;
+    color: $darkgray;
 }
 
 section {
@@ -27,10 +33,12 @@ h2 {
     font-size: 1.4rem;
 }
 
-article h2 {
-    text-align: left;
-    padding: 0 0.5rem;
-    margin-bottom: .5rem;
+article {
+    h2 {
+        text-align: left;
+        padding: 0 .5rem;
+        margin-bottom: .5rem;
+    }
 }
 
 p,
@@ -40,7 +48,7 @@ pre {
 
 p {
     font-size: 1.2rem;
-    padding: 0.5rem;
+    padding: .5rem;
 }
 
 pre {
@@ -48,15 +56,15 @@ pre {
     font-family: monospace;
 }
 
-.row,
-.cell {
+.cell,
+.row {
     margin-bottom: 1.5rem;
 }
 
 .cell,
 .gcell {
-    background-color: azure;
-    border: 1px solid darkcyan;
+    background-color: $white;
+    border: 1px solid $darkgray;
     p {
         text-align: center;
     }
@@ -65,52 +73,52 @@ pre {
 .nested {
     aside,
     main {
-        border: dashed 1px darkcyan;
+        border: dashed 1px $darkgray;
     }
 }
 
 @include breakpoint(wide) {
     .row {
-        @include container();
+        @include container;
     }
     .row.even.one-col .cell {
-        @include column();
+        @include column;
     }
     .row.even.two-col .cell {
         @include column(1/2);
     }
     .row.even.three-col .cell {
-        @include column();
+        @include column;
     }
     .row.even.four-col .cell {
-        @include column();
+        @include column;
     }
     .cell.two-twelve {
-        @include column()
+        @include column;
     }
     .cell.three-twelve {
-        @include column()
+        @include column;
     }
     .cell.five-twelve {
-        @include column()
+        @include column;
     }
     .cell.eight-twelve {
-        @include column()
+        @include column;
     }
     .cell.nine-twelve {
-        @include column()
+        @include column;
     }
     .cell.two-eleven {
-        @include column()
+        @include column;
     }
     .cell.four-eleven {
-        @include column()
+        @include column;
     }
     .cell.one-eleven {
-        @include column()
+        @include column;
     }
     .nested {
-        @include container();
+        @include container;
         aside {
             @include column(1/3);
         }
@@ -125,10 +133,10 @@ pre {
 
 @include breakpoint(normal) {
     .row {
-        @include container();
+        @include container;
     }
     .row.even.one-col .cell {
-        @include column();
+        @include column;
     }
     .row.even.two-col .cell {
         @include column(1/2);
@@ -171,7 +179,7 @@ pre {
 .radius-example {
     display: inline-block;
     line-height: 100px;
-    border: solid 2px darksalmon;
+    border: solid 2px $darkgray;
     padding: 0 10px;
     &.same-radius {
         @include border-radius(16px);
@@ -180,172 +188,156 @@ pre {
         @include border-radius(4px, 8px, 16px, 32px);
     }
 }
-
 .border-example {
     display: inline-block;
     line-height: 100px;
     padding: 0 10px;
     &.border {
-        @include border();
+        @include border;
     }
     &.custom-border {
         @include border(solid 1px #333, top bottom);
     }
 }
-
 .clearfix {
     @include clearfix;
 }
 
-@include font-face('Museo', 'https://dq25e8j0im0tm.cloudfront.net/fonts/museo/museo-sans-500') .museo {
+@include font-face('Museo', 'https://dq25e8j0im0tm.cloudfront.net/fonts/museo/museo-sans-500')
+
+.museo {
     font-family: Museo;
 }
 
-.box-with-border,
-.box {
-    @include size(28%, 100px)
-    background: #4fade3;
+.box,
+.box-with-border {
+    @include size(28%, 100px);
+    background: $blue;
     margin: 24px;
     display: inline-block;
-    position: relative;
+    @include position(relative);
     span {
-        color: #f1f1f1;
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
+        color: $white;
+        @include position(absolute, 50% null null 0);
         transform: translateY(-50%);
         width: 100%;
-        left: 0;
         text-align: center;
         font-size: 18px;
     }
 }
-
 .box-with-border {
-    border: 4px solid #4fade3;
-    background: #eee;
+    border: 4px solid $blue;
+    background: $white;
     span {
-        color: #4fade3;
+        color: $blue;
     }
 }
-
 .box {
     &.arrow-top-left {
-        @include arrow('top', 'left', 10px, #4fade3);
+        @include arrow('top', 'left', 10px, $blue);
     }
     &.arrow-top-right {
-        @include arrow('top', 'right', 10px, #4fade3);
+        @include arrow('top', 'right', 10px, $blue);
     }
     &.arrow-top-center {
-        @include arrow('top', 'center', 10px, #4fade3);
+        @include arrow('top', 'center', 10px, $blue);
     }
     &.arrow-bottom-left {
-        @include arrow('bottom', 'left', 10px, #4fade3);
+        @include arrow('bottom', 'left', 10px, $blue);
     }
     &.arrow-bottom-right {
-        @include arrow('bottom', 'right', 10px, #4fade3);
+        @include arrow('bottom', 'right', 10px, $blue);
     }
     &.arrow-bottom-center {
-        @include arrow('bottom', 'center', 10px, #4fade3);
+        @include arrow('bottom', 'center', 10px, $blue);
     }
     &.arrow-left-top {
-        @include arrow('left', 'top', 10px, #4fade3);
+        @include arrow('left', 'top', 10px, $blue);
     }
     &.arrow-left-center {
-        @include arrow('left', 'center', 10px, #4fade3);
+        @include arrow('left', 'center', 10px, $blue);
     }
     &.arrow-left-bottom {
-        @include arrow('left', 'bottom', 10px, #4fade3);
+        @include arrow('left', 'bottom', 10px, $blue);
     }
     &.arrow-right-top {
-        @include arrow('right', 'top', 10px, #4fade3);
+        @include arrow('right', 'top', 10px, $blue);
     }
     &.arrow-right-center {
-        @include arrow('right', 'center', 10px, #4fade3);
+        @include arrow('right', 'center', 10px, $blue);
     }
     &.arrow-right-bottom {
-        @include arrow('right', 'bottom', 10px, #4fade3);
+        @include arrow('right', 'bottom', 10px, $blue);
     }
-}
-;
+};
 .box-with-border {
     &.arrow-top-left {
-        @include arrow('top', 'left', 10px, #eee, #4fade3, 6px);
+        @include arrow('top', 'left', 10px, $white, $blue, 6px);
     }
     &.arrow-top-right {
-        @include arrow('top', 'right', 10px, #eee, #4fade3, 6px);
+        @include arrow('top', 'right', 10px, $white, $blue, 6px);
     }
     &.arrow-top-center {
-        @include arrow('top', 'center', 10px, #eee, #4fade3, 6px);
+        @include arrow('top', 'center', 10px, $white, $blue, 6px);
     }
     &.arrow-bottom-left {
-        @include arrow('bottom', 'left', 10px, #eee, #4fade3, 6px);
+        @include arrow('bottom', 'left', 10px, $white, $blue, 6px);
     }
     &.arrow-bottom-right {
-        @include arrow('bottom', 'right', 10px, #eee, #4fade3, 6px);
+        @include arrow('bottom', 'right', 10px, $white, $blue, 6px);
     }
     &.arrow-bottom-center {
-        @include arrow('bottom', 'center', 10px, #eee, #4fade3, 6px);
+        @include arrow('bottom', 'center', 10px, $white, $blue, 6px);
     }
     &.arrow-left-top {
-        @include arrow('left', 'top', 10px, #eee, #4fade3, 6px);
+        @include arrow('left', 'top', 10px, $white, $blue, 6px);
     }
     &.arrow-left-center {
-        @include arrow('left', 'center', 10px, #eee, #4fade3, 6px);
+        @include arrow('left', 'center', 10px, $white, $blue, 6px);
     }
     &.arrow-left-bottom {
-        @include arrow('left', 'bottom', 10px, #eee, #4fade3, 6px);
+        @include arrow('left', 'bottom', 10px, $white, $blue, 6px);
     }
     &.arrow-right-top {
-        @include arrow('right', 'top', 10px, #eee, #4fade3, 6px);
+        @include arrow('right', 'top', 10px, $white, $blue, 6px);
     }
     &.arrow-right-center {
-        @include arrow('right', 'center', 10px, #eee, #4fade3, 6px);
+        @include arrow('right', 'center', 10px, $white, $blue, 6px);
     }
     &.arrow-right-bottom {
-        @include arrow('right', 'bottom', 10px, #eee, #4fade3, 6px);
+        @include arrow('right', 'bottom', 10px, $white, $blue, 6px);
     }
 }
-
 .center-holder {
-    position: relative;
+    @include position(relative);
     height: 300px;
     @include border;
-
     .centered {
-        background-color: aqua;
-        color: aliceblue;
+        background-color: $blue;
+        color: $white;
         @include size(100px);
         @include center(both);
     }
 }
-
-@include block('media') {
+@include block ('media') {
     width: 400px;
     padding: 10px;
     @include border;
     @include container;
-
-    @include element('img') {
-        background-color: lighten(#4fade3, 50%);
-        @include modifier('small') {
+    @include element ('img') {
+        background-color: lighten($blue, 50%);
+        @include modifier ('small') {
             @include column(1/4);
             padding: 2px;
         }
     }
-
-
-
-    @include element('body') {
+    @include element ('body') {
         @include column(3/4);
-
-        p,
-        h3 {
+        h3,
+        p {
             margin: 0;
             padding: 0;
             font-size: .6rem;
         }
     }
-
 }
