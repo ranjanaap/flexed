@@ -1,10 +1,7 @@
 @import '../flexed/flexed';
-
-
 $blue: #4fade3;
 $white: #f1f1f1;
 $darkgray: #2f4f4f;
-
 body {
     margin: 2rem auto;
     font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
@@ -12,27 +9,22 @@ body {
     background-color: $white;
     color: $darkgray;
 }
-
 section {
     margin: 3rem auto;
     max-width: 70rem;
     padding: 0 1rem;
 }
-
 h1,
 h2 {
     margin: 1rem 0 1.5rem;
     text-align: center;
 }
-
 h1 {
     font-size: 2rem;
 }
-
 h2 {
     font-size: 1.4rem;
 }
-
 article {
     h2 {
         text-align: left;
@@ -40,27 +32,22 @@ article {
         margin-bottom: .5rem;
     }
 }
-
 p,
 pre {
     line-height: 1.4;
 }
-
 p {
     font-size: 1.2rem;
     padding: .5rem;
 }
-
 pre {
     font-size: 1.3rem;
     font-family: monospace;
 }
-
 .cell,
 .row {
     margin-bottom: 1.5rem;
 }
-
 .cell,
 .gcell {
     background-color: $white;
@@ -69,17 +56,16 @@ pre {
         text-align: center;
     }
 }
-
 .nested {
     aside,
     main {
         border: dashed 1px $darkgray;
     }
 }
-
 @include breakpoint(wide) {
     .row {
         @include container;
+        
     }
     .row.even.one-col .cell {
         @include column;
@@ -130,7 +116,6 @@ pre {
         @include column(1/2, 20px);
     }
 }
-
 @include breakpoint(normal) {
     .row {
         @include container;
@@ -175,7 +160,6 @@ pre {
         @include column(1/2, 20px);
     }
 }
-
 .radius-example {
     display: inline-block;
     line-height: 100px;
@@ -202,110 +186,29 @@ pre {
 .clearfix {
     @include clearfix;
 }
-
-@include font-face('Museo', 'https://dq25e8j0im0tm.cloudfront.net/fonts/museo/museo-sans-500')
-
+@include font-face( 'Museo', 'https://dq25e8j0im0tm.cloudfront.net/fonts/museo/museo-sans-500');
 .museo {
     font-family: Museo;
 }
-
-.box,
-.box-with-border {
-    @include size(28%, 100px);
+.tooltip {
+    // Centering
+    max-width: 20em;
+    margin: 0 auto;
+    // Enable absolute positioning for pseudo-element
+    position: relative;
+    // Aesthetics
     background: $blue;
-    margin: 24px;
-    display: inline-block;
-    @include position(relative);
-    span {
-        color: $white;
-        @include position(absolute, 50% null null 0);
-        transform: translateY(-50%);
-        width: 100%;
-        text-align: center;
-        font-size: 18px;
-    }
-}
-.box-with-border {
-    border: 4px solid $blue;
-    background: $white;
-    span {
-        color: $blue;
-    }
-}
-.box {
-    &.arrow-top-left {
-        @include arrow('top', 'left', 10px, $blue);
-    }
-    &.arrow-top-right {
-        @include arrow('top', 'right', 10px, $blue);
-    }
-    &.arrow-top-center {
-        @include arrow('top', 'center', 10px, $blue);
-    }
-    &.arrow-bottom-left {
-        @include arrow('bottom', 'left', 10px, $blue);
-    }
-    &.arrow-bottom-right {
-        @include arrow('bottom', 'right', 10px, $blue);
-    }
-    &.arrow-bottom-center {
-        @include arrow('bottom', 'center', 10px, $blue);
-    }
-    &.arrow-left-top {
-        @include arrow('left', 'top', 10px, $blue);
-    }
-    &.arrow-left-center {
-        @include arrow('left', 'center', 10px, $blue);
-    }
-    &.arrow-left-bottom {
-        @include arrow('left', 'bottom', 10px, $blue);
-    }
-    &.arrow-right-top {
-        @include arrow('right', 'top', 10px, $blue);
-    }
-    &.arrow-right-center {
-        @include arrow('right', 'center', 10px, $blue);
-    }
-    &.arrow-right-bottom {
-        @include arrow('right', 'bottom', 10px, $blue);
-    }
-};
-.box-with-border {
-    &.arrow-top-left {
-        @include arrow('top', 'left', 10px, $white, $blue, 6px);
-    }
-    &.arrow-top-right {
-        @include arrow('top', 'right', 10px, $white, $blue, 6px);
-    }
-    &.arrow-top-center {
-        @include arrow('top', 'center', 10px, $white, $blue, 6px);
-    }
-    &.arrow-bottom-left {
-        @include arrow('bottom', 'left', 10px, $white, $blue, 6px);
-    }
-    &.arrow-bottom-right {
-        @include arrow('bottom', 'right', 10px, $white, $blue, 6px);
-    }
-    &.arrow-bottom-center {
-        @include arrow('bottom', 'center', 10px, $white, $blue, 6px);
-    }
-    &.arrow-left-top {
-        @include arrow('left', 'top', 10px, $white, $blue, 6px);
-    }
-    &.arrow-left-center {
-        @include arrow('left', 'center', 10px, $white, $blue, 6px);
-    }
-    &.arrow-left-bottom {
-        @include arrow('left', 'bottom', 10px, $white, $blue, 6px);
-    }
-    &.arrow-right-top {
-        @include arrow('right', 'top', 10px, $white, $blue, 6px);
-    }
-    &.arrow-right-center {
-        @include arrow('right', 'center', 10px, $white, $blue, 6px);
-    }
-    &.arrow-right-bottom {
-        @include arrow('right', 'bottom', 10px, $white, $blue, 6px);
+    padding: .5em;
+    border-radius: .15em;
+    // Font
+    color: $white;
+    text-align: center;
+    font-weight: bold;
+    // Triangle
+    &::before {
+        @include triangle(down, 1em, $blue);
+        bottom: -1em;
+        left: 50%;
     }
 }
 .center-holder {
@@ -337,7 +240,7 @@ pre {
         p {
             margin: 0;
             padding: 0;
-            font-size: .6rem;
+            font-size: 0.6rem;
         }
     }
 }

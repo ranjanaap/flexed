@@ -1,0 +1,59 @@
+/// Mixin for creating triangles.
+/// This mixin creates triangles should be used on a pseudo element.
+///
+/// @group flexed
+///
+/// @param [string] $direction: arrow direction
+///
+/// @param [list] $position: list of offsets and values
+///
+/// @param [color] $color (inherit): arrow color
+///
+/// @param [number] $size (1em): arrow size
+///
+///
+/// @example scss - Example
+///    .foo {
+///       @include triangle(down, 1em, #4fade3);
+///    }
+///
+/// @example scss - Output
+///   .foo {
+///        top: 100%;
+///        left: 1em;
+///        position: absolute;
+///        width: 0;
+///        height: 0;
+///        content: '';
+///        z-index: 2;
+///        border-top: 1.5em solid #3498db;
+///        border-left: 1em solid transparent;
+///        border-right: 1em solid transparent;
+///    }
+@mixin triangle($direction, $size: 6px, $color: #222) {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 0;
+    @if ($direction == 'up') {
+        border-bottom: $size solid $color;
+        border-left: 1/2*$size solid transparent;
+        border-right: 1/2*$size solid transparent;
+    }
+    @else if ($direction == 'down') {
+        border-top: $size solid $color;
+        border-left: 1/2*$size solid transparent;
+        border-right: 1/2*$size solid transparent;
+    }
+    @else if ($direction == 'left') {
+        border-top: 1/2*$size solid transparent;
+        border-bottom: 1/2*$size solid transparent;
+        border-right: $size solid $color;
+    }
+    @else if ($direction == 'right') {
+        border-top: 1/2*$size solid transparent;
+        border-bottom: 1/2*$size solid transparent;
+        border-left: $size solid $color;
+    }
+}
