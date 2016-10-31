@@ -1,6 +1,6 @@
 {
   "name": "flexed",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "flexed - a flexbox based grid in scss and other utility mixins",
   "main": "index.js",
   "scripts": {
@@ -19,18 +19,6 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "sassdoc": "^2.1.20",
-    "sassdoc-theme-alix": "^0.3.27",
-    "sassdoc-theme-atomic": "^0.1.5",
-    "sassdoc-theme-flippant": "^0.1.0",
-    "sassdoc-theme-herman": "^0.3.2",
-    "sassdoc-theme-jigsass": "^0.2.15",
-    "sassdoc-theme-light": "^2.0.0",
-    "sassdoc-theme-neat": "0.0.2",
-    "sassdoc-theme-nightshade": "^1.0.0",
-    "sassdoc-theme-oddbird": "^0.1.0",
-    "sassdoc-theme-rest": "^1.0.3",
-    "sassdoc-theme-upbase": "^1.1.0",
-    "sassdoc-theme-vulcan": "^0.2.0",
-    "sassdoc-theme-winter": "^0.3.7"
+    "sassdoc-theme-flippant": "^0.1.0"
   }
 }

@@ -3,7 +3,7 @@ module.exports = function (gulp, plugin) {
     'use strict';
 
     var sassdoc = require('sassdoc'),
-        doctheme = require('sassdoc-theme-herman'),
+        doctheme = require('sassdoc-theme-flippant'),
         options = {
             dest: 'dist/docs',
             verbose: true,
