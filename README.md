@@ -1,16 +1,12 @@
 # flexed
 
 Online Docs: https://ranjanaap.github.io/flexed/docs
-Online Examples: https://ranjanaap.github.io/flexed/example
-
 
 ### Install
 
 ```scss
-npm install flexed --save-dev
+npm install flexed --save
 ```
-
-Browse to node_modules/flexed/index.html for examples
 
 ### Stylesheet usage
 
