@@ -91,40 +91,13 @@ pre {
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-  .row.even.one-col .cell {
+  .row.even.one-col .cell, .row.even.three-col .cell, .row.even.four-col .cell {
     width: calc(100% - 5px);
   }
   .row.even.two-col .cell {
     width: calc(50% - 5px);
   }
-  .row.even.three-col .cell {
-    width: calc(100% - 5px);
-  }
-  .row.even.four-col .cell {
-    width: calc(100% - 5px);
-  }
-  .cell.two-twelve {
-    width: calc(100% - 5px);
-  }
-  .cell.three-twelve {
-    width: calc(100% - 5px);
-  }
-  .cell.five-twelve {
-    width: calc(100% - 5px);
-  }
-  .cell.eight-twelve {
-    width: calc(100% - 5px);
-  }
-  .cell.nine-twelve {
-    width: calc(100% - 5px);
-  }
-  .cell.two-eleven {
-    width: calc(100% - 5px);
-  }
-  .cell.four-eleven {
-    width: calc(100% - 5px);
-  }
-  .cell.one-eleven {
+  .cell.two-twelve, .cell.three-twelve, .cell.five-twelve, .cell.eight-twelve, .cell.nine-twelve, .cell.two-eleven, .cell.four-eleven, .cell.one-eleven {
     width: calc(100% - 5px);
   }
   .nested {
