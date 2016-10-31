@@ -18,7 +18,7 @@
 ///     flex-wrap: wrap;
 ///     justify-content: space-between;
 ///   }
-@mixin container ($max-row-width: $row-width, $center: false ) {
+@mixin container ($max-row-width: $row-width, $center: false) {
     margin: 0 auto;
     max-width: $max-row-width;
     display: flex;
@@ -47,7 +47,7 @@
 ///   .bar {
 ///     width: 49.5%;
 ///   }
-@mixin column ($width:1, $gutter: $gutter-width) {
+@mixin column ($width: 1, $gutter: $gutter-width) {
     $percentage: percentage($width);
     width: calc(#{$percentage} - #{$gutter/2});
 }
@@ -70,9 +70,8 @@
 ///   }
 @mixin breakpoint($name) {
     @if not map-has-key($breakpoints, $name) {
-        @warn "Warning: `#{$name}` is not a valid breakpoint name.";
-    }
-    @else {
+        @warn 'Warning: `#{$name}` is not a valid breakpoint name.';
+    } @else {
         @media (min-width: map-get($breakpoints, $name)) {
             @content;
         }

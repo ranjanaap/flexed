@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
     plugin = require('gulp-load-plugins')({ //this loads all plugins so no need to reload them in individual scripts
         rename: {
-            'flippant': 'sassdoc-theme-flippant'
+            'vulcan': 'sassdoc-theme-vulcan'
         }
     });
 

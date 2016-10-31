@@ -4,7 +4,7 @@ Online Docs: https://ranjanaap.github.io/flexed/docs
 Online Examples: https://ranjanaap.github.io/flexed/example
 
 
-###Install
+### Install
 
 ```scss
 npm install flexed --save-dev

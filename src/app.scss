@@ -65,7 +65,7 @@ pre {
 @include breakpoint(wide) {
     .row {
         @include container;
-        
+
     }
     .row.even.one-col .cell {
         @include column;
@@ -216,13 +216,14 @@ pre {
     height: 300px;
     @include border;
     .centered {
-        background-color: $blue;
-        color: $white;
+        background-color: color(b);
+        color: color(m, lighter);
         @include size(100px);
         @include center(both);
     }
 }
-@include block ('media') {
+
+.media {
     width: 400px;
     padding: 10px;
     @include border;
@@ -240,7 +241,7 @@ pre {
         p {
             margin: 0;
             padding: 0;
-            font-size: 0.6rem;
+            font-size: .6rem;
         }
     }
 }

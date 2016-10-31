@@ -58,3 +58,56 @@ $border-radius: 6px !default;
 ///
 /// @access public
 $border: 1px solid #000 !default;
+
+/// Default color map.
+///
+/// @group variables
+///
+/// @type map
+///
+/// @access public
+$colors: (
+    b: (
+        base: #00abde,
+        darker: #007398,
+        dark: #008bb8,
+        light: #68cbf2,
+        lighter: #bfefff
+    ),
+    g: (
+        base: #70cf36,
+        darker: #468222,
+        dark: #549c29,
+        light: #96d96e,
+        lighter: #bee4a7
+    ),
+    r: (
+        base: #ff9a55,
+        darker: #e15b00,
+        dark: #fb7419,
+        light: #ffb480,
+        lighter: #f7cfb3
+    ),
+    m: (
+        base: #808080,
+        darker: #242424,
+        dark: #4d4d4d,
+        light: #b3b3b3,
+        lighter: #dfdfdf
+    )
+);
+
+/// Default z-index values.
+///
+/// @group variables
+///
+/// @type map
+///
+/// @access public
+$z-index: (
+    bump: 10,
+    dropdown: 100,
+    overlay: 200,
+    modal: 300,
+    trump: 1000
+);
