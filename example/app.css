@@ -10,8 +10,8 @@ body {
   margin: 2rem auto;
   font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-weight: 300;
-  background-color: #f1f1f1;
-  color: #2f4f4f;
+  background-color: #fff;
+  color: #242424;
 }
 
 section {
@@ -64,8 +64,8 @@ pre {
 
 .cell,
 .gcell {
-  background-color: #f1f1f1;
-  border: 1px solid #2f4f4f;
+  background-color: #fff;
+  border: 1px solid #242424;
 }
 
 .cell p,
@@ -75,10 +75,10 @@ pre {
 
 .nested aside,
 .nested main {
-  border: dashed 1px #2f4f4f;
+  border: dashed 1px #242424;
 }
 
-@media (min-width: 61.25em) {
+@media (min-width: 73.125em) {
   .row {
     margin: 0 auto;
     max-width: 100%;
@@ -92,13 +92,13 @@ pre {
     justify-content: space-between;
   }
   .row.even.one-col .cell, .row.even.three-col .cell, .row.even.four-col .cell {
-    width: calc(100% - 5px);
+    width: calc(100% - 0.75em);
   }
   .row.even.two-col .cell {
-    width: calc(50% - 5px);
+    width: calc(50% - 0.75em);
   }
   .cell.two-twelve, .cell.three-twelve, .cell.five-twelve, .cell.eight-twelve, .cell.nine-twelve, .cell.two-eleven, .cell.four-eleven, .cell.one-eleven {
-    width: calc(100% - 5px);
+    width: calc(100% - 0.75em);
   }
   .nested {
     margin: 0 auto;
@@ -113,17 +113,17 @@ pre {
     justify-content: space-between;
   }
   .nested aside {
-    width: calc(33.33333% - 5px);
+    width: calc(33.33333% - 0.75em);
   }
   .nested main {
-    width: calc(66.66667% - 5px);
+    width: calc(66.66667% - 0.75em);
   }
   .gcell {
     width: calc(50% - 10px);
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 46.875em) {
   .row {
     margin: 0 auto;
     max-width: 100%;
@@ -137,40 +137,40 @@ pre {
     justify-content: space-between;
   }
   .row.even.one-col .cell {
-    width: calc(100% - 5px);
+    width: calc(100% - 0.75em);
   }
   .row.even.two-col .cell {
-    width: calc(50% - 5px);
+    width: calc(50% - 0.75em);
   }
   .row.even.three-col .cell {
-    width: calc(33.33333% - 5px);
+    width: calc(33.33333% - 0.75em);
   }
   .row.even.four-col .cell {
-    width: calc(25% - 5px);
+    width: calc(25% - 0.75em);
   }
   .cell.two-twelve {
-    width: calc(16.66667% - 5px);
+    width: calc(16.66667% - 0.75em);
   }
   .cell.three-twelve {
-    width: calc(25% - 5px);
+    width: calc(25% - 0.75em);
   }
   .cell.five-twelve {
-    width: calc(41.66667% - 5px);
+    width: calc(41.66667% - 0.75em);
   }
   .cell.eight-twelve {
-    width: calc(66.66667% - 5px);
+    width: calc(66.66667% - 0.75em);
   }
   .cell.nine-twelve {
-    width: calc(75% - 5px);
+    width: calc(75% - 0.75em);
   }
   .cell.two-eleven {
-    width: calc(18.18182% - 5px);
+    width: calc(18.18182% - 0.75em);
   }
   .cell.four-eleven {
-    width: calc(36.36364% - 5px);
+    width: calc(36.36364% - 0.75em);
   }
   .cell.one-eleven {
-    width: calc(9.09091% - 5px);
+    width: calc(9.09091% - 0.75em);
   }
   .gcell {
     width: calc(50% - 10px);
@@ -180,7 +180,7 @@ pre {
 .radius-example {
   display: inline-block;
   line-height: 100px;
-  border: solid 2px #2f4f4f;
+  border: solid 2px #242424;
   padding: 0 10px;
 }
 
@@ -206,8 +206,8 @@ pre {
 }
 
 .border-example.custom-border {
-  border-top: solid 1px #333;
-  border-bottom: solid 1px #333;
+  border-top: solid 1px #242424;
+  border-bottom: solid 1px #242424;
 }
 
 .clearfix::after {
@@ -231,10 +231,10 @@ pre {
   max-width: 20em;
   margin: 0 auto;
   position: relative;
-  background: #4fade3;
+  background: #00abde;
   padding: .5em;
   border-radius: .15em;
-  color: #f1f1f1;
+  color: #fff;
   text-align: center;
   font-weight: bold;
 }
@@ -245,7 +245,7 @@ pre {
   position: absolute;
   height: 0;
   width: 0;
-  border-top: 1em solid #4fade3;
+  border-top: 1em solid #00abde;
   border-left: 0.5em solid transparent;
   border-right: 0.5em solid transparent;
   bottom: -1em;
@@ -261,7 +261,7 @@ pre {
 
 .center-holder .centered {
   background-color: #00abde;
-  color: #dfdfdf;
+  color: #fff;
   width: 100px;
   height: 100px;
   position: absolute;
@@ -288,16 +288,16 @@ pre {
 }
 
 .media__img {
-  background-color: white;
+  background-color: #b3b3b3;
 }
 
 .media__img--small {
-  width: calc(25% - 5px);
+  width: calc(25% - 0.75em);
   padding: 2px;
 }
 
 .media__body {
-  width: calc(75% - 5px);
+  width: calc(75% - 0.75em);
 }
 
 .media__body h3,
