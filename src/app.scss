@@ -20,10 +20,10 @@ h2 {
     text-align: center;
 }
 h1 {
-    font-size: 2rem;
+    @include font-size(32px);
 }
 h2 {
-    font-size: 1.4rem;
+    @include font-size(22px);
 }
 article {
     h2 {
@@ -215,6 +215,7 @@ pre {
     @include position(relative);
     height: 300px;
     @include border;
+    z-index: z-index(trump);
     .centered {
         background-color: color(b);
         color: color(m, lighter);

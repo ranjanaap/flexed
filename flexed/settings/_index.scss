@@ -111,3 +111,12 @@ $z-index: (
     modal: 300,
     trump: 1000
 );
+
+/// Default border for border mixin.
+///
+/// @group variables
+///
+/// @type string
+///
+/// @access public
+$base-font-size: 16px;

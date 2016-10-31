@@ -27,11 +27,13 @@ h2 {
 }
 
 h1 {
+  font-size: 32px;
   font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 article h2 {
@@ -281,6 +283,7 @@ pre {
   position: relative;
   height: 300px;
   border: 1px solid #000;
+  z-index: 1000;
 }
 
 .center-holder .centered {
