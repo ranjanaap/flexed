@@ -3,7 +3,7 @@
 ///
 /// @group utility
 ///
-/// @param {color} $color - Color (r(red), g(green), b(blue) or m(monochrome))
+/// @param {color} $color - Color (aorange, agreen, ablue or agray)
 ///
 ///
 /// @param {shade} $shade - Shade (base, light, lighter, dark, darker)
@@ -11,8 +11,8 @@
 ///
 /// @example scss - Example
 /// .example-el {
-///     background: color(m, lighter); // base monochrome
-///     color: color(b); // base blue
+///     background: color(agray, lighter);
+///     color: color(ablue); // base blue
 /// }
 ///
 /// @example scss - Output

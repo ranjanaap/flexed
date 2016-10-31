@@ -2,6 +2,20 @@
 /// @group bem
 /// @access public
 /// @param {String} $element - Element's name
+/// @example scss - Example
+///   .foo {
+///       width: 30em;
+///       @include element('bar') {
+///           background: #fff;
+///       }
+///   }
+/// @example scss - Output
+///   .foo {
+///     width: 30em;
+///   }
+///   .foo__bar {
+///       background: #fff;
+///   }
 @mixin element($element) {
     &__#{$element} {
         @content;
@@ -12,6 +26,26 @@
 /// @group bem
 /// @access public
 /// @param {String} $modifier - Modifier's name
+/// @example scss - Example
+///   .foo {
+///       width: 30em;
+///       @include element('bar') {
+///           background: #fff;
+///           @include modifier('baz') {
+///               border: solid 1px #000;
+///           }
+///       }
+///   }
+/// @example scss - Output
+///   .foo {
+///     width: 30em;
+///   }
+///   .foo__bar {
+///       background: #fff;
+///   }
+///   .foo__bar--baz {
+///       border: solid 1px #000;
+///   }
 @mixin modifier($modifier) {
     &--#{$modifier} {
         @content;

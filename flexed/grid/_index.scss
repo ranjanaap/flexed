@@ -58,14 +58,14 @@
 ///
 /// @group grid
 ///
-/// @param {Name} $name - thin(30em) OR normal(48em) OR wide(61.25em) OR full(80em)
+/// @param {Name} $name - thin(20em) OR normal(46.875em) OR wide(73.125em) OR full(100em)
 ///
 /// @example scss - Example
-///   @include breakpoint(full) {
+///   @include breakpoint(wide) {
 ///     .baz { color: black; }
 ///   }
 /// @example scss - Output
-///   @media (min-width: 60em) {
+///   @media (min-width: 73.125em) {
 ///     .baz { color: black; }
 ///   }
 @mixin breakpoint($name) {

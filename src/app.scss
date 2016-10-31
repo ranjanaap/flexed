@@ -1,13 +1,10 @@
 @import '../flexed/flexed';
-$blue: #4fade3;
-$white: #f1f1f1;
-$darkgray: #2f4f4f;
 body {
     margin: 2rem auto;
     font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
     font-weight: 300;
-    background-color: $white;
-    color: $darkgray;
+    background-color: color(awhite);
+    color: color(agray, darker);
 }
 section {
     margin: 3rem auto;
@@ -50,8 +47,8 @@ pre {
 }
 .cell,
 .gcell {
-    background-color: $white;
-    border: 1px solid $darkgray;
+    background-color: color(awhite);
+    border: 1px solid color(agray, darker);
     p {
         text-align: center;
     }
@@ -59,7 +56,7 @@ pre {
 .nested {
     aside,
     main {
-        border: dashed 1px $darkgray;
+        border: dashed 1px color(agray, darker);
     }
 }
 @include breakpoint(wide) {
@@ -170,7 +167,7 @@ pre {
 .radius-example {
     display: inline-block;
     line-height: 100px;
-    border: solid 2px $darkgray;
+    border: solid 2px color(agray, darker);
     padding: 0 10px;
     &.same-radius {
         @include border-radius(16px);
@@ -187,7 +184,7 @@ pre {
         @include border;
     }
     &.custom-border {
-        @include border(solid 1px #333, top bottom);
+        @include border(solid 1px color(agray, darker), top bottom);
     }
 }
 .clearfix {
@@ -204,16 +201,16 @@ pre {
     // Enable absolute positioning for pseudo-element
     position: relative;
     // Aesthetics
-    background: $blue;
+    background: color(ablue);
     padding: .5em;
     border-radius: .15em;
     // Font
-    color: $white;
+    color: color(awhite);
     text-align: center;
     font-weight: bold;
     // Triangle
     &::before {
-        @include triangle(down, 1em, $blue);
+        @include triangle(down, 1em, color(ablue));
         bottom: -1em;
         left: 50%;
     }
@@ -224,8 +221,8 @@ pre {
     @include border;
     z-index: z-index(trump);
     .centered {
-        background-color: color(b);
-        color: color(m, lighter);
+        background-color: color(ablue);
+        color: color(awhite);
         @include size(100px);
         @include center(both);
     }
@@ -237,7 +234,7 @@ pre {
     @include border;
     @include container;
     @include element ('img') {
-        background-color: lighten($blue, 50%);
+        background-color: color(agray, light);
         @include modifier ('small') {
             @include column(1/4);
             padding: 2px;

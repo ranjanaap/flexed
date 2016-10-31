@@ -3,11 +3,11 @@
 ///
 /// @group utility
 ///
-/// @param {string} $direction: arrow direction
+/// @param {string} $direction [down] triangle direction (up, down, left, right)
 ///
-/// @param {color} $color : arrow color
+/// @param {color} $color [#242424] triangle color
 ///
-/// @param {number} $size (1em): arrow size
+/// @param {number} $size [1em] triangle size
 ///
 ///
 /// @example scss - Example
@@ -28,7 +28,7 @@
 ///        border-left: 1em solid transparent;
 ///        border-right: 1em solid transparent;
 ///    }
-@mixin triangle($direction, $size: 1em, $color: #242424) {
+@mixin triangle($direction: 'down', $size: 1em, $color: #242424) {
     content: '';
     display: block;
     position: absolute;

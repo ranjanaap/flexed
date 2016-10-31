@@ -1,24 +1,72 @@
+/// Default color map.
+///
+/// @group variables
+///
+/// @type map
+///
+/// @access public
+$colors: (
+    ablack: (
+        base: #000
+    ),
+    awhite: (
+        base: #fff
+    ),
+    ablue: (
+        base: #00abde,
+        darker: #007398,
+        dark: #008bb8,
+        light: #68cbf2,
+        lighter: #bfefff
+    ),
+    agreen: (
+        base: #70cf36,
+        darker: #468222,
+        dark: #549c29,
+        light: #96d96e,
+        lighter: #bee4a7
+    ),
+    aorange: (
+        base: #ff9a55,
+        darker: #e15b00,
+        dark: #fb7419,
+        light: #ffb480,
+        lighter: #f7cfb3
+    ),
+    agray: (
+        base: #808080,
+        darker: #242424,
+        dark: #4d4d4d,
+        light: #b3b3b3,
+        lighter: #dfdfdf
+    )
+) !default;
+
 /// Default breakpoints.
 ///
 /// @type map
 ///
 /// @group variables
 ///
-/// @property {thin} thin [30em]
+/// @property {breakpoint} thin [20em]
 ///   Thinnest breakpoint setting for breakpoint mixin.
 ///
-/// @property {normal} normal [48em]
+/// @property {breakpoint} normal [46.875em]
 ///   Medium breakpoint setting for breakpoint mixin.
 ///
-/// @property {wide} wide [61.25em]
+/// @property {breakpoint} wide [73.125em]
 ///   Widest breakpoint setting for breakpoint mixin.
 ///
-/// @property {full} full [80em]
+/// @property {breakpoint} full [100em]
 ///   Widest breakpoint setting for breakpoint mixin.
 ///
 /// @access public
-$breakpoints: ( thin: 30em, normal: 48em, wide: 61.25em, full: 80em) !default;
-
+$breakpoints: (
+    thin: 20em,
+    normal: 46.875em,
+    wide: 73.125em,
+    full: 100em
+) !default;
 
 /// Default max-width for container mixin.
 ///
@@ -29,7 +77,6 @@ $breakpoints: ( thin: 30em, normal: 48em, wide: 61.25em, full: 80em) !default;
 /// @access public
 $row-width: 100% !default;
 
-
 /// Default gutter for column mixin.
 ///
 /// @group variables
@@ -37,8 +84,8 @@ $row-width: 100% !default;
 /// @type string
 ///
 /// @access public
-$gutter-width: 10px !default;
 
+$gutter-width: 1.5em !default;
 
 /// Default radius for border-radius mixin.
 ///
@@ -47,8 +94,7 @@ $gutter-width: 10px !default;
 /// @type string
 ///
 /// @access public
-$border-radius: 6px !default;
-
+$border-radius: .375em !default;
 
 /// Default border for border mixin.
 ///
@@ -59,49 +105,25 @@ $border-radius: 6px !default;
 /// @access public
 $border: 1px solid #000 !default;
 
-/// Default color map.
-///
-/// @group variables
-///
-/// @type map
-///
-/// @access public
-$colors: (
-    b: (
-        base: #00abde,
-        darker: #007398,
-        dark: #008bb8,
-        light: #68cbf2,
-        lighter: #bfefff
-    ),
-    g: (
-        base: #70cf36,
-        darker: #468222,
-        dark: #549c29,
-        light: #96d96e,
-        lighter: #bee4a7
-    ),
-    r: (
-        base: #ff9a55,
-        darker: #e15b00,
-        dark: #fb7419,
-        light: #ffb480,
-        lighter: #f7cfb3
-    ),
-    m: (
-        base: #808080,
-        darker: #242424,
-        dark: #4d4d4d,
-        light: #b3b3b3,
-        lighter: #dfdfdf
-    )
-);
-
 /// Default z-index values.
 ///
 /// @group variables
 ///
 /// @type map
+/// @property {z-index} bump [10]
+///   lowest z-index.
+///
+/// @property {z-index} dropdown [100]
+///   z-index of 100.
+///
+/// @property {z-index} overlay [200]
+///   z-index of 200.
+///
+/// @property {z-index} modal [300]
+///   z-index of 300.
+///
+/// @property {z-index} trump [1000]
+///   z-index of 1000.
 ///
 /// @access public
 $z-index: (
