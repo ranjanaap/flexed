@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>flexed Documentation</title><link href="assets/img/favicon.ico" rel="shortcut icon"><link rel="stylesheet" href="assets/css/main.css"><link rel="stylesheet" href="assets/css/theme.css"></head><body><div data-sassdoc-region="app"><header role="banner" data-sassdoc-region="banner"><h1 data-sassdoc="project-title"><a href="index.html" rel="home" data-sassdoc="project-name">flexed</a> <span data-sassdoc="project-version">0.5.0</span></h1></header><div data-sassdoc-region="container"><nav role="navigation" data-sassdoc-region="nav"><h2 data-sassdoc="nav-title"><a href="index.html" rel="home" data-sassdoc-nav="is-not-active">StyleGuide</a></h2><a href="bem.html" data-sassdoc-nav="is-not-active">bem</a> <a href="grid.html" data-sassdoc-nav="is-not-active">grid</a> <a href="utility.html" data-sassdoc-nav="is-active">utility</a> <a href="variables.html" data-sassdoc-nav="is-not-active">variables</a></nav><main role="main" data-sassdoc-region="main" data-sassdoc-page="utility"><h2 data-sassdoc="page-title">utility</h2><section data-sassdoc-item="function" id="function--color"><h4 data-sassdoc="item-title"><span data-sassdoc="item-name">color()</span> <span data-sassdoc="item-type">function</span></h4><div data-sassdoc="item-description"><p>Function to get color of a shade from color-map. This mixin inserts font-face declarations for custom fonts.</p></div><pre data-sassdoc="hljs"><code class="lang-scss">@function color(
+  $color,
+  $shade
+) { /* ... */ }</code></pre><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Example</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.example-el {
+    background: color(m, lighter); // base monochrome
+    color: color(b); // base blue
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Output</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.example-el {
+    background: #dfdfdf;
+    color: #00abde;
+}</code></pre></div></section><section data-sassdoc-item="function" id="function--z-index"><h4 data-sassdoc="item-title"><span data-sassdoc="item-name">z-index()</span> <span data-sassdoc="item-type">function</span></h4><div data-sassdoc="item-description"><p>Function to get z-index values based on layer names. This mixin inserts font-face declarations for custom fonts.</p></div><pre data-sassdoc="hljs"><code class="lang-scss">@function z-index(
+  $layer
+) { /* ... */ }</code></pre><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Example</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.example-el {
+    z-index: z-index(bump); // 10
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Output</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.example-el {
+    z-index: 10;
+}</code></pre></div></section><section data-sassdoc-item="mixin" id="mixin--border-radius"><h4 data-sassdoc="item-title"><span data-sassdoc="item-name">border-radius()</span> <span data-sassdoc="item-type">mixin</span></h4><div data-sassdoc="item-description"><p>Mixin to create border radius for an element. This mixin creates border radius for an element. Radius can be specified as a single radius or as top-left, top-right, bottom-right, bottom-left</p></div><pre data-sassdoc="hljs"><code class="lang-scss">@mixin border-radius(
+  $border-radius: 6px
+) { /* ... */ }</code></pre><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Example</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.foo {
+  @include border-radius(10px);
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Output</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.foo {
+  border-radius: 10px;
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Example</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.bar {
+  @include border-radius(0, 10px, 15px, 20px);
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Output</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.bar {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 20px;
+}</code></pre></div></section><section data-sassdoc-item="mixin" id="mixin--border"><h4 data-sassdoc="item-title"><span data-sassdoc="item-name">border()</span> <span data-sassdoc="item-type">mixin</span></h4><div data-sassdoc="item-description"><p>Mixin to create border for an element. This mixin creates border for an element. Sides can be specified as top, right, bottom, left</p></div><pre data-sassdoc="hljs"><code class="lang-scss">@mixin border(
+  $border: 1px solid #000
+) { /* ... */ }</code></pre><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Example</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.foo {
+  @include border(1px solid #333);
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Output</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.foo {
+  border: 1px solid  #333;
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Example</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.bar {
+  @include border(1px solid  #333, top bottom);
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Output</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.bar {
+  border-top: 1px solid  #333;
+  border-bottom: 1px solid  #333;
+}</code></pre></div></section><section data-sassdoc-item="mixin" id="mixin--center"><h4 data-sassdoc="item-title"><span data-sassdoc="item-name">center()</span> <span data-sassdoc="item-type">mixin</span></h4><div data-sassdoc="item-description"><p>Mixin to center an absolutely positioned element. This mixin centers an absolutely positioned element within its parents.</p></div><pre data-sassdoc="hljs"><code class="lang-scss">@mixin center(
+  $direction
+) { /* ... */ }</code></pre><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Example</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.foo {
+  @include center(both);
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Output</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.foo {
+  top: 50%;
+  left: 50%
+  transform: translate(-50%, -50%);
+}</code></pre></div></section><section data-sassdoc-item="mixin" id="mixin--clearfix"><h4 data-sassdoc="item-title"><span data-sassdoc="item-name">clearfix()</span> <span data-sassdoc="item-type">mixin</span></h4><div data-sassdoc="item-description"><p>Provides an easy way to include a clearfix for containing floats.</p></div><pre data-sassdoc="hljs"><code class="lang-scss">@mixin clearfix { /* ... */ }</code></pre><div data-sassdoc="example"><pre data-sassdoc="hljs"><code class="lang-scss">.element {
+  @include clearfix;
+}</code></pre></div><div data-sassdoc="example"><pre data-sassdoc="hljs"><code class="lang-css">.element::after {
+  clear: both;
+  content: &quot;&quot;;
+  display: block;
+}</code></pre></div></section><section data-sassdoc-item="mixin" id="mixin--font-face"><h4 data-sassdoc="item-title"><span data-sassdoc="item-name">font-face()</span> <span data-sassdoc="item-type">mixin</span></h4><div data-sassdoc="item-description"><p>Mixin for custom fonts. This mixin inserts font-face declarations for custom fonts.</p></div><pre data-sassdoc="hljs"><code class="lang-scss">@mixin font-face(
+  $font-name,
+  $font-file,
+  $font-weight: normal,
+  $font-style: normal
+) { /* ... */ }</code></pre><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Example</p></div><pre data-sassdoc="hljs"><code class="lang-scss">@include font-face(&#39;Museo&#39;, &#39;museo-sans-500&#39;);</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Output</p></div><pre data-sassdoc="hljs"><code class="lang-scss">@font-face {
+  font-family: &quot;Museo&quot;;
+  src: url(&quot;museo-sans-500.woff&quot;) format(&quot;woff&quot;), url(&quot;museo-sans-500.woff2&quot;) format(&quot;woff2&quot;);
+  font-weight: normal;
+  font-style: normal;
+}</code></pre></div></section><section data-sassdoc-item="mixin" id="mixin--position"><h4 data-sassdoc="item-title"><span data-sassdoc="item-name">position()</span> <span data-sassdoc="item-type">mixin</span></h4><div data-sassdoc="item-description"><p>This mixin sets the position of an element.</p></div><pre data-sassdoc="hljs"><code class="lang-scss">@mixin position(
+  $type: relative,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) { /* ... */ }</code></pre><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Example</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.foo {
+   @include position(absolute, null null 10px 15px);
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Output</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.foo {
+     position: absolute;
+     bottom: 10px;
+     left: 15px;
+ }</code></pre></div></section><section data-sassdoc-item="mixin" id="mixin--size"><h4 data-sassdoc="item-title"><span data-sassdoc="item-name">size()</span> <span data-sassdoc="item-type">mixin</span></h4><div data-sassdoc="item-description"><p>Mixin to size an element. This mixin sets width and height for an element.</p></div><pre data-sassdoc="hljs"><code class="lang-scss">@mixin size(
+  $width,
+  $height: $width
+) { /* ... */ }</code></pre><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Example</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.foo {
+  @include size(100px);
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Output</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.foo {
+  width: 100px;
+  height: 100px;
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Example</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.bar {
+  @include size(400px, 300px);
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Output</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.bar {
+  width: 400px;
+  height: 300px;
+}</code></pre></div></section><section data-sassdoc-item="mixin" id="mixin--triangle"><h4 data-sassdoc="item-title"><span data-sassdoc="item-name">triangle()</span> <span data-sassdoc="item-type">mixin</span></h4><div data-sassdoc="item-description"><p>Mixin for creating triangles. This mixin creates triangles should be used on a pseudo element.</p></div><pre data-sassdoc="hljs"><code class="lang-scss">@mixin triangle(
+) { /* ... */ }</code></pre><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Example</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.foo {
+   @include triangle(down, 1em, #4fade3);
+}</code></pre></div><div data-sassdoc="example"><div data-sassdoc="example-description"><p>Output</p></div><pre data-sassdoc="hljs"><code class="lang-scss">.foo {
+     top: 100%;
+     left: 1em;
+     position: absolute;
+     width: 0;
+     height: 0;
+     content: &#39;&#39;;
+     z-index: 2;
+     border-top: 1.5em solid #3498db;
+     border-left: 1em solid transparent;
+     border-right: 1em solid transparent;
+ }</code></pre></div></section></main></div></div><script type="text/javascript" src="assets/js/highlight.js"></script><script type="text/javascript">hljs.initHighlightingOnLoad();</script></body></html>

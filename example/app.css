@@ -284,8 +284,8 @@ pre {
 }
 
 .center-holder .centered {
-  background-color: #4fade3;
-  color: #f1f1f1;
+  background-color: #00abde;
+  color: #dfdfdf;
   width: 100px;
   height: 100px;
   position: absolute;
@@ -328,7 +328,7 @@ pre {
 .media__body p {
   margin: 0;
   padding: 0;
-  font-size: 0.6rem;
+  font-size: .6rem;
 }
 
 /*# sourceMappingURL=app.css.map */
