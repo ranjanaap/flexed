@@ -92,13 +92,13 @@ pre {
     justify-content: space-between;
   }
   .row.even.one-col .cell, .row.even.three-col .cell, .row.even.four-col .cell {
-    width: calc(100% - 0.75em);
+    width: 100%;
   }
   .row.even.two-col .cell {
     width: calc(50% - 0.75em);
   }
   .cell.two-twelve, .cell.three-twelve, .cell.five-twelve, .cell.eight-twelve, .cell.nine-twelve, .cell.two-eleven, .cell.four-eleven, .cell.one-eleven {
-    width: calc(100% - 0.75em);
+    width: 100%;
   }
   .nested {
     margin: 0 auto;
@@ -137,7 +137,7 @@ pre {
     justify-content: space-between;
   }
   .row.even.one-col .cell {
-    width: calc(100% - 0.75em);
+    width: 100%;
   }
   .row.even.two-col .cell {
     width: calc(50% - 0.75em);
