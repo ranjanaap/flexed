@@ -231,7 +231,7 @@ pre {
   max-width: 20em;
   margin: 0 auto;
   position: relative;
-  background: #00abde;
+  background: #00a8de;
   padding: .5em;
   border-radius: .15em;
   color: #fff;
@@ -245,7 +245,7 @@ pre {
   position: absolute;
   height: 0;
   width: 0;
-  border-top: 1em solid #00abde;
+  border-top: 1em solid #00a8de;
   border-left: 0.5em solid transparent;
   border-right: 0.5em solid transparent;
   bottom: -1em;
@@ -260,7 +260,7 @@ pre {
 }
 
 .center-holder .centered {
-  background-color: #00abde;
+  background-color: #00a8de;
   color: #fff;
   width: 100px;
   height: 100px;
