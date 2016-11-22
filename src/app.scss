@@ -230,7 +230,7 @@ pre {
 
 .media {
     width: 400px;
-    padding: 10px;
+    @include rem-fallback(padding, 10px);
     @include border;
     @include container;
     @include element ('img') {
