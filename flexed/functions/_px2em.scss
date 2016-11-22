@@ -1,0 +1,20 @@
+$browser-context: strip-unit($base-font-size);
+/// Function to convert px to ems
+///
+/// @group utility
+///
+/// @param {pixels} $pixels - pixels to convert to em
+/// @param {context} $context [base-font-size] - base font size
+///
+/// @example scss - Example
+/// .example-el {
+///     padding-top: em(16px);
+/// }
+///
+/// @example scss - Output
+/// .example-el {
+///     padding-top: 1em;
+/// }
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em;
+}
