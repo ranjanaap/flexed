@@ -27,12 +27,12 @@ h2 {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: "32pxpx";
   font-size: 2pxrem;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: "22pxpx";
   font-size: 1.375pxrem;
 }
 
@@ -48,7 +48,8 @@ pre {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: "14px";
+  font-size: 0.875rem;
   padding: .5rem;
 }
 

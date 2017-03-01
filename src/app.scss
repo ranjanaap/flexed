@@ -34,7 +34,7 @@ pre {
     line-height: 1.4;
 }
 p {
-    font-size: 1.2rem;
+    @include font-size(14);
     padding: .5rem;
 }
 pre {
