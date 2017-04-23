@@ -42,7 +42,7 @@ gulp.task('sass', function () {
 The [grunt-sass](https://github.com/sindresorhus/grunt-sass) task uses
 [node-sass](https://github.com/andrew/node-sass)
 ([LibSass](https://github.com/hcatlin/libsass)) underneath, and is the recommended
-way to use Grunt with node-neat.
+way to use Grunt with flexed.
 
 Example config:
 
